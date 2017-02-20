@@ -1,0 +1,43 @@
+{
+    "flights": [
+                {
+                "icao": "LinkedIn office",
+                "altitudeInMeters": 117,
+                "callSign": "CPZ6051",
+                "headingInDegrees": 132.56732841750284,
+                "latitude": 37.786793,
+                "longitude": -122.398263,
+                "sensorMacAddress": "B8-27-EB-12-A5-E5",
+                "type": "ar_flights_schema",
+                "velocityInMetersPerSecond": 222.82611999540126,
+                "createdInMillis": 1481673865141,
+                "lastUpdatedInMillis": 1481674254888
+                },
+                {
+                "icao": "Millenium Tower,SF",
+                "altitudeInMeters": 198,
+                "callSign": "CPZ6051",
+                "headingInDegrees": 132.56732841750284,
+                "latitude": 37.790457,
+                "longitude": -122.396696,
+                "sensorMacAddress": "B8-27-EB-12-A5-E5",
+                "type": "ar_flights_schema",
+                "velocityInMetersPerSecond": 222.82611999540126,
+                "createdInMillis": 1481673865141,
+                "lastUpdatedInMillis": 1481674254888
+                },
+                {
+                "icao": "Transmerica Pyramid",
+                "altitudeInMeters": 265,
+                "callSign": "CPZ6051",
+                "headingInDegrees": 132.56732841750284,
+                "latitude": 37.795110,
+                "longitude": -122.403260,
+                "sensorMacAddress": "B8-27-EB-12-A5-E5",
+                "type": "ar_flights_schema",
+                "velocityInMetersPerSecond": 222.82611999540126,
+                "createdInMillis": 1481673865141,
+                "lastUpdatedInMillis": 1481674254888
+                }
+                ]
+}

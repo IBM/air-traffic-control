@@ -1,0 +1,962 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		405EB7521DEDFE93005D7206 /* plane.png in Resources */ = {isa = PBXBuildFile; fileRef = 405EB7511DEDFE93005D7206 /* plane.png */; };
+		838EB5E2A8B2B1C544E78587 /* Pods_ARFlightTracker_iOS_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8BF64170D16C16BC4CF5EA8 /* Pods_ARFlightTracker_iOS_Swift.framework */; };
+		8B498A632771FB95378C9BFD /* Pods_ARFlightTracker_iOS_SwiftUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 910064F3BAB977E37097D594 /* Pods_ARFlightTracker_iOS_SwiftUITests.framework */; };
+		A0B9DD0467F7701F676A9187 /* Pods_ARFlightTracker_iOS_SwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ADC2DED20F56EC4C2697D6A /* Pods_ARFlightTracker_iOS_SwiftTests.framework */; };
+		B41FFF301E0DC23100C7EDF1 /* ARViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41FFF2F1E0DC23100C7EDF1 /* ARViewHelper.swift */; };
+		B4228FF21DDA7C8E008292C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4228FF11DDA7C8E008292C7 /* AppDelegate.swift */; };
+		B4228FF41DDA7C8E008292C7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4228FF31DDA7C8E008292C7 /* ViewController.swift */; };
+		B4228FF91DDA7C8E008292C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4228FF81DDA7C8E008292C7 /* Assets.xcassets */; };
+		B42290071DDA7C8E008292C7 /* ARFlightTracker-iOS-SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42290061DDA7C8E008292C7 /* ARFlightTracker-iOS-SwiftTests.swift */; };
+		B42290121DDA7C8E008292C7 /* ARFlightTracker-iOS-SwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42290111DDA7C8E008292C7 /* ARFlightTracker-iOS-SwiftUITests.swift */; };
+		B42290201DDB92C4008292C7 /* FlightAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B422901F1DDB92C4008292C7 /* FlightAnnotation.swift */; };
+		B42290221DDB968A008292C7 /* FlightInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42290211DDB968A008292C7 /* FlightInfo.swift */; };
+		B42290291DDCEE01008292C7 /* TestFlights.json in Resources */ = {isa = PBXBuildFile; fileRef = B42290231DDB98DD008292C7 /* TestFlights.json */; };
+		B42290321DDE538E008292C7 /* MQTTConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42290311DDE538E008292C7 /* MQTTConnection.swift */; };
+		B426D90D1E2848B20085B3D8 /* FlightBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = B426D90C1E2848B20085B3D8 /* FlightBubble.swift */; };
+		B426D90F1E303D4C0085B3D8 /* bubble.png in Resources */ = {isa = PBXBuildFile; fileRef = B426D90E1E303D4B0085B3D8 /* bubble.png */; };
+		B426D9101E3FCD840085B3D8 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B4228FFD1DDA7C8E008292C7 /* Info.plist */; };
+		B455F5DB1DDE7F97007EFF11 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B455F5D91DDE7F08007EFF11 /* Security.framework */; };
+		B45FBB091DE65E2800DF2708 /* FlightCalloutView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B45FBB081DE65E2800DF2708 /* FlightCalloutView.xib */; };
+		B45FBB0D1DE663A000DF2708 /* FlightCalloutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45FBB0C1DE663A000DF2708 /* FlightCalloutView.swift */; };
+		B46C66151DF5FF3E00D3FD12 /* ARFlightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46C66141DF5FF3E00D3FD12 /* ARFlightViewController.swift */; };
+		B46C66171DF5FF5500D3FD12 /* ARFlightAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46C66161DF5FF5500D3FD12 /* ARFlightAnnotationView.swift */; };
+		B46C66191DF5FFC700D3FD12 /* ARFlightAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46C66181DF5FFC700D3FD12 /* ARFlightAnnotation.swift */; };
+		B46C661C1DF6006200D3FD12 /* ARFlightConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46C661B1DF6006200D3FD12 /* ARFlightConfiguration.swift */; };
+		B46C661E1DF6048900D3FD12 /* ARTrackingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46C661D1DF6048900D3FD12 /* ARTrackingManager.swift */; };
+		B46C66201DF6107C00D3FD12 /* FlightMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46C661F1DF6107C00D3FD12 /* FlightMapViewController.swift */; };
+		B46C66221DF74B7900D3FD12 /* ARFlightAnnotationCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46C66211DF74B7900D3FD12 /* ARFlightAnnotationCustom.swift */; };
+		B46C66241DF7550600D3FD12 /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = B46C66231DF7550600D3FD12 /* close.png */; };
+		B46C66271DF7685500D3FD12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B46C66251DF7685500D3FD12 /* Main.storyboard */; };
+		B49E10451E1F017E002F8051 /* MarkerView.m in Sources */ = {isa = PBXBuildFile; fileRef = B49E10431E1F017E002F8051 /* MarkerView.m */; };
+		B49E10581E2412F8002F8051 /* ARKitConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = B49E10491E2412F8002F8051 /* ARKitConfig.m */; };
+		B49E10591E2412F8002F8051 /* ARKitEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = B49E104B1E2412F8002F8051 /* ARKitEngine.m */; };
+		B49E105A1E2412F8002F8051 /* LocalizationHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B49E104F1E2412F8002F8051 /* LocalizationHelper.m */; };
+		B49E105B1E2412F8002F8051 /* ARGeoCoordinate.m in Sources */ = {isa = PBXBuildFile; fileRef = B49E10521E2412F8002F8051 /* ARGeoCoordinate.m */; };
+		B49E105C1E2412F8002F8051 /* ARObjectView.m in Sources */ = {isa = PBXBuildFile; fileRef = B49E10551E2412F8002F8051 /* ARObjectView.m */; };
+		B49E105D1E2412F8002F8051 /* RadarView.m in Sources */ = {isa = PBXBuildFile; fileRef = B49E10571E2412F8002F8051 /* RadarView.m */; };
+		B49E105F1E241609002F8051 /* ARFlightViewController_v1.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49E105E1E241609002F8051 /* ARFlightViewController_v1.swift */; };
+		B49E10611E24410D002F8051 /* box.png in Resources */ = {isa = PBXBuildFile; fileRef = B49E10601E24410D002F8051 /* box.png */; };
+		B49E10631E259DF3002F8051 /* radar.png in Resources */ = {isa = PBXBuildFile; fileRef = B49E10621E259DF3002F8051 /* radar.png */; };
+		B49E10651E259E07002F8051 /* radar_dot.png in Resources */ = {isa = PBXBuildFile; fileRef = B49E10641E259E07002F8051 /* radar_dot.png */; };
+		B4A177931E00C0EE0015A848 /* compass.png in Resources */ = {isa = PBXBuildFile; fileRef = B4A177921E00C0EE0015A848 /* compass.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B42290031DDA7C8E008292C7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B4228FE61DDA7C8E008292C7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B4228FED1DDA7C8E008292C7;
+			remoteInfo = IBMFlightTracker;
+		};
+		B422900E1DDA7C8E008292C7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B4228FE61DDA7C8E008292C7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B4228FED1DDA7C8E008292C7;
+			remoteInfo = IBMFlightTracker;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		405EB7511DEDFE93005D7206 /* plane.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plane.png; sourceTree = "<group>"; };
+		475BC1D5096C7EC9E9A0BDB3 /* Pods-ARFlightTracker-iOS-SwiftUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARFlightTracker-iOS-SwiftUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ARFlightTracker-iOS-SwiftUITests/Pods-ARFlightTracker-iOS-SwiftUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		57CDB0E44E120C0CA09D28DF /* Pods-ARFlightTracker-iOS-Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARFlightTracker-iOS-Swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-ARFlightTracker-iOS-Swift/Pods-ARFlightTracker-iOS-Swift.release.xcconfig"; sourceTree = "<group>"; };
+		78A7C2C37FA45A3B17B65CD8 /* Pods-ARFlightTracker-iOS-SwiftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARFlightTracker-iOS-SwiftTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ARFlightTracker-iOS-SwiftTests/Pods-ARFlightTracker-iOS-SwiftTests.debug.xcconfig"; sourceTree = "<group>"; };
+		79A5E3CAEFCA21DD12C3D057 /* Pods-ARFlightTracker-iOS-SwiftUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARFlightTracker-iOS-SwiftUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ARFlightTracker-iOS-SwiftUITests/Pods-ARFlightTracker-iOS-SwiftUITests.release.xcconfig"; sourceTree = "<group>"; };
+		910064F3BAB977E37097D594 /* Pods_ARFlightTracker_iOS_SwiftUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ARFlightTracker_iOS_SwiftUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9ADC2DED20F56EC4C2697D6A /* Pods_ARFlightTracker_iOS_SwiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ARFlightTracker_iOS_SwiftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B40BFF981E1ECD3400BA1CBD /* ARFlightTracker-iOS-Swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ARFlightTracker-iOS-Swift-Bridging-Header.h"; sourceTree = "<group>"; };
+		B41FFF2F1E0DC23100C7EDF1 /* ARViewHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARViewHelper.swift; sourceTree = "<group>"; };
+		B4228FEE1DDA7C8E008292C7 /* ARFlightTracker-iOS-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ARFlightTracker-iOS-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4228FF11DDA7C8E008292C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B4228FF31DDA7C8E008292C7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B4228FF81DDA7C8E008292C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B4228FFD1DDA7C8E008292C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B42290021DDA7C8E008292C7 /* ARFlightTracker-iOS-SwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ARFlightTracker-iOS-SwiftTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B42290061DDA7C8E008292C7 /* ARFlightTracker-iOS-SwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ARFlightTracker-iOS-SwiftTests.swift"; sourceTree = "<group>"; };
+		B42290081DDA7C8E008292C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B422900D1DDA7C8E008292C7 /* ARFlightTracker-iOS-SwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ARFlightTracker-iOS-SwiftUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B42290111DDA7C8E008292C7 /* ARFlightTracker-iOS-SwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ARFlightTracker-iOS-SwiftUITests.swift"; sourceTree = "<group>"; };
+		B42290131DDA7C8E008292C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B422901F1DDB92C4008292C7 /* FlightAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlightAnnotation.swift; sourceTree = "<group>"; };
+		B42290211DDB968A008292C7 /* FlightInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlightInfo.swift; sourceTree = "<group>"; };
+		B42290231DDB98DD008292C7 /* TestFlights.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = TestFlights.json; sourceTree = "<group>"; };
+		B42290311DDE538E008292C7 /* MQTTConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MQTTConnection.swift; sourceTree = "<group>"; };
+		B426D90C1E2848B20085B3D8 /* FlightBubble.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlightBubble.swift; sourceTree = "<group>"; };
+		B426D90E1E303D4B0085B3D8 /* bubble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bubble.png; sourceTree = "<group>"; };
+		B455F5D91DDE7F08007EFF11 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		B455F5DC1DDE7FC0007EFF11 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		B45FBB081DE65E2800DF2708 /* FlightCalloutView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FlightCalloutView.xib; sourceTree = "<group>"; };
+		B45FBB0C1DE663A000DF2708 /* FlightCalloutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlightCalloutView.swift; sourceTree = "<group>"; };
+		B46C66141DF5FF3E00D3FD12 /* ARFlightViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ARFlightViewController.swift; path = IBMFlightTracker/ARFlightViewController.swift; sourceTree = SOURCE_ROOT; };
+		B46C66161DF5FF5500D3FD12 /* ARFlightAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ARFlightAnnotationView.swift; path = IBMFlightTracker/ARFlightAnnotationView.swift; sourceTree = SOURCE_ROOT; };
+		B46C66181DF5FFC700D3FD12 /* ARFlightAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARFlightAnnotation.swift; sourceTree = "<group>"; };
+		B46C661B1DF6006200D3FD12 /* ARFlightConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ARFlightConfiguration.swift; path = IBMFlightTracker/ARFlightConfiguration.swift; sourceTree = SOURCE_ROOT; };
+		B46C661D1DF6048900D3FD12 /* ARTrackingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ARTrackingManager.swift; path = IBMFlightTracker/ARTrackingManager.swift; sourceTree = SOURCE_ROOT; };
+		B46C661F1DF6107C00D3FD12 /* FlightMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlightMapViewController.swift; sourceTree = "<group>"; };
+		B46C66211DF74B7900D3FD12 /* ARFlightAnnotationCustom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARFlightAnnotationCustom.swift; sourceTree = "<group>"; };
+		B46C66231DF7550600D3FD12 /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = close.png; path = ../../ios_workspace/HDAugmentedReality/HDAugmentedReality/Resources/close.png; sourceTree = "<group>"; };
+		B46C66261DF7685500D3FD12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B49E10431E1F017E002F8051 /* MarkerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarkerView.m; sourceTree = "<group>"; };
+		B49E10441E1F017E002F8051 /* MarkerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarkerView.h; sourceTree = "<group>"; };
+		B49E10471E2412F8002F8051 /* ARKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARKit.h; sourceTree = "<group>"; };
+		B49E10481E2412F8002F8051 /* ARKitConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARKitConfig.h; sourceTree = "<group>"; };
+		B49E10491E2412F8002F8051 /* ARKitConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARKitConfig.m; sourceTree = "<group>"; };
+		B49E104A1E2412F8002F8051 /* ARKitEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARKitEngine.h; sourceTree = "<group>"; };
+		B49E104B1E2412F8002F8051 /* ARKitEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARKitEngine.m; sourceTree = "<group>"; };
+		B49E104C1E2412F8002F8051 /* ARViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARViewDelegate.h; sourceTree = "<group>"; };
+		B49E104D1E2412F8002F8051 /* LocalizationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalizationDelegate.h; sourceTree = "<group>"; };
+		B49E104E1E2412F8002F8051 /* LocalizationHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalizationHelper.h; sourceTree = "<group>"; };
+		B49E104F1E2412F8002F8051 /* LocalizationHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalizationHelper.m; sourceTree = "<group>"; };
+		B49E10511E2412F8002F8051 /* ARGeoCoordinate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARGeoCoordinate.h; sourceTree = "<group>"; };
+		B49E10521E2412F8002F8051 /* ARGeoCoordinate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARGeoCoordinate.m; sourceTree = "<group>"; };
+		B49E10541E2412F8002F8051 /* ARObjectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARObjectView.h; sourceTree = "<group>"; };
+		B49E10551E2412F8002F8051 /* ARObjectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARObjectView.m; sourceTree = "<group>"; };
+		B49E10561E2412F8002F8051 /* RadarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadarView.h; sourceTree = "<group>"; };
+		B49E10571E2412F8002F8051 /* RadarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadarView.m; sourceTree = "<group>"; };
+		B49E105E1E241609002F8051 /* ARFlightViewController_v1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARFlightViewController_v1.swift; sourceTree = "<group>"; };
+		B49E10601E24410D002F8051 /* box.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = box.png; sourceTree = "<group>"; };
+		B49E10621E259DF3002F8051 /* radar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = radar.png; sourceTree = "<group>"; };
+		B49E10641E259E07002F8051 /* radar_dot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = radar_dot.png; sourceTree = "<group>"; };
+		B4A177921E00C0EE0015A848 /* compass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = compass.png; path = ../../../Desktop/compass.png; sourceTree = "<group>"; };
+		C2062092E7F941DAB0F09548 /* Pods-ARFlightTracker-iOS-SwiftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARFlightTracker-iOS-SwiftTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ARFlightTracker-iOS-SwiftTests/Pods-ARFlightTracker-iOS-SwiftTests.release.xcconfig"; sourceTree = "<group>"; };
+		C8BF64170D16C16BC4CF5EA8 /* Pods_ARFlightTracker_iOS_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ARFlightTracker_iOS_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED79BA4636D3551A4BFA9DF6 /* Pods-ARFlightTracker-iOS-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARFlightTracker-iOS-Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ARFlightTracker-iOS-Swift/Pods-ARFlightTracker-iOS-Swift.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B4228FEB1DDA7C8E008292C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B455F5DB1DDE7F97007EFF11 /* Security.framework in Frameworks */,
+				838EB5E2A8B2B1C544E78587 /* Pods_ARFlightTracker_iOS_Swift.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4228FFF1DDA7C8E008292C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0B9DD0467F7701F676A9187 /* Pods_ARFlightTracker_iOS_SwiftTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B422900A1DDA7C8E008292C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B498A632771FB95378C9BFD /* Pods_ARFlightTracker_iOS_SwiftUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B4228FE51DDA7C8E008292C7 = {
+			isa = PBXGroup;
+			children = (
+				B4228FF01DDA7C8E008292C7 /* ARFlightTracker-iOS-Swift */,
+				B42290051DDA7C8E008292C7 /* ARFlightTracker-iOS-SwiftTests */,
+				B42290101DDA7C8E008292C7 /* ARFlightTracker-iOS-SwiftUITests */,
+				B4228FEF1DDA7C8E008292C7 /* Products */,
+				C058C9C65A06B3F7A4E4B393 /* Frameworks */,
+				F7FC3D6BC8A00DF1AC6EDF9B /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		B4228FEF1DDA7C8E008292C7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B4228FEE1DDA7C8E008292C7 /* ARFlightTracker-iOS-Swift.app */,
+				B42290021DDA7C8E008292C7 /* ARFlightTracker-iOS-SwiftTests.xctest */,
+				B422900D1DDA7C8E008292C7 /* ARFlightTracker-iOS-SwiftUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B4228FF01DDA7C8E008292C7 /* ARFlightTracker-iOS-Swift */ = {
+			isa = PBXGroup;
+			children = (
+				B49E10461E2412F8002F8051 /* ARKit */,
+				B46C661A1DF6005300D3FD12 /* config */,
+				B45FBB071DE65DC300DF2708 /* callout */,
+				B42290331DDE53C2008292C7 /* util */,
+				B422902A1DDD0FD5008292C7 /* assets */,
+				B42290281DDCE53D008292C7 /* view */,
+				B42290271DDCE50F008292C7 /* controller */,
+				B42290261DDCE505008292C7 /* model */,
+				B4228FF11DDA7C8E008292C7 /* AppDelegate.swift */,
+				B4228FF31DDA7C8E008292C7 /* ViewController.swift */,
+				B4228FF81DDA7C8E008292C7 /* Assets.xcassets */,
+				B46C66251DF7685500D3FD12 /* Main.storyboard */,
+				B4228FFD1DDA7C8E008292C7 /* Info.plist */,
+				B40BFF981E1ECD3400BA1CBD /* ARFlightTracker-iOS-Swift-Bridging-Header.h */,
+			);
+			name = "ARFlightTracker-iOS-Swift";
+			path = IBMFlightTracker;
+			sourceTree = "<group>";
+		};
+		B42290051DDA7C8E008292C7 /* ARFlightTracker-iOS-SwiftTests */ = {
+			isa = PBXGroup;
+			children = (
+				B42290061DDA7C8E008292C7 /* ARFlightTracker-iOS-SwiftTests.swift */,
+				B42290081DDA7C8E008292C7 /* Info.plist */,
+			);
+			name = "ARFlightTracker-iOS-SwiftTests";
+			path = IBMFlightTrackerTests;
+			sourceTree = "<group>";
+		};
+		B42290101DDA7C8E008292C7 /* ARFlightTracker-iOS-SwiftUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B42290111DDA7C8E008292C7 /* ARFlightTracker-iOS-SwiftUITests.swift */,
+				B42290131DDA7C8E008292C7 /* Info.plist */,
+			);
+			name = "ARFlightTracker-iOS-SwiftUITests";
+			path = IBMFlightTrackerUITests;
+			sourceTree = "<group>";
+		};
+		B42290261DDCE505008292C7 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				B46C66181DF5FFC700D3FD12 /* ARFlightAnnotation.swift */,
+				B42290231DDB98DD008292C7 /* TestFlights.json */,
+				B422901F1DDB92C4008292C7 /* FlightAnnotation.swift */,
+				B42290211DDB968A008292C7 /* FlightInfo.swift */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		B42290271DDCE50F008292C7 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				B46C66141DF5FF3E00D3FD12 /* ARFlightViewController.swift */,
+				B46C661D1DF6048900D3FD12 /* ARTrackingManager.swift */,
+				B46C661F1DF6107C00D3FD12 /* FlightMapViewController.swift */,
+				B49E105E1E241609002F8051 /* ARFlightViewController_v1.swift */,
+			);
+			name = controller;
+			sourceTree = "<group>";
+		};
+		B42290281DDCE53D008292C7 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				B49E10431E1F017E002F8051 /* MarkerView.m */,
+				B49E10441E1F017E002F8051 /* MarkerView.h */,
+				B46C66161DF5FF5500D3FD12 /* ARFlightAnnotationView.swift */,
+				B46C66211DF74B7900D3FD12 /* ARFlightAnnotationCustom.swift */,
+				B426D90C1E2848B20085B3D8 /* FlightBubble.swift */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		B422902A1DDD0FD5008292C7 /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				B426D90E1E303D4B0085B3D8 /* bubble.png */,
+				B49E10601E24410D002F8051 /* box.png */,
+				B46C66231DF7550600D3FD12 /* close.png */,
+				B4A177921E00C0EE0015A848 /* compass.png */,
+				B49E10621E259DF3002F8051 /* radar.png */,
+				B49E10641E259E07002F8051 /* radar_dot.png */,
+				405EB7511DEDFE93005D7206 /* plane.png */,
+			);
+			name = assets;
+			sourceTree = "<group>";
+		};
+		B42290331DDE53C2008292C7 /* util */ = {
+			isa = PBXGroup;
+			children = (
+				B42290311DDE538E008292C7 /* MQTTConnection.swift */,
+				B41FFF2F1E0DC23100C7EDF1 /* ARViewHelper.swift */,
+			);
+			name = util;
+			sourceTree = "<group>";
+		};
+		B45FBB071DE65DC300DF2708 /* callout */ = {
+			isa = PBXGroup;
+			children = (
+				B45FBB081DE65E2800DF2708 /* FlightCalloutView.xib */,
+				B45FBB0C1DE663A000DF2708 /* FlightCalloutView.swift */,
+			);
+			name = callout;
+			sourceTree = "<group>";
+		};
+		B46C661A1DF6005300D3FD12 /* config */ = {
+			isa = PBXGroup;
+			children = (
+				B46C661B1DF6006200D3FD12 /* ARFlightConfiguration.swift */,
+			);
+			name = config;
+			sourceTree = "<group>";
+		};
+		B49E10461E2412F8002F8051 /* ARKit */ = {
+			isa = PBXGroup;
+			children = (
+				B49E10471E2412F8002F8051 /* ARKit.h */,
+				B49E10481E2412F8002F8051 /* ARKitConfig.h */,
+				B49E10491E2412F8002F8051 /* ARKitConfig.m */,
+				B49E104A1E2412F8002F8051 /* ARKitEngine.h */,
+				B49E104B1E2412F8002F8051 /* ARKitEngine.m */,
+				B49E104C1E2412F8002F8051 /* ARViewDelegate.h */,
+				B49E104D1E2412F8002F8051 /* LocalizationDelegate.h */,
+				B49E104E1E2412F8002F8051 /* LocalizationHelper.h */,
+				B49E104F1E2412F8002F8051 /* LocalizationHelper.m */,
+				B49E10501E2412F8002F8051 /* Model */,
+				B49E10531E2412F8002F8051 /* View */,
+			);
+			path = ARKit;
+			sourceTree = "<group>";
+		};
+		B49E10501E2412F8002F8051 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B49E10511E2412F8002F8051 /* ARGeoCoordinate.h */,
+				B49E10521E2412F8002F8051 /* ARGeoCoordinate.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B49E10531E2412F8002F8051 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B49E10541E2412F8002F8051 /* ARObjectView.h */,
+				B49E10551E2412F8002F8051 /* ARObjectView.m */,
+				B49E10561E2412F8002F8051 /* RadarView.h */,
+				B49E10571E2412F8002F8051 /* RadarView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C058C9C65A06B3F7A4E4B393 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B455F5DC1DDE7FC0007EFF11 /* XCTest.framework */,
+				B455F5D91DDE7F08007EFF11 /* Security.framework */,
+				C8BF64170D16C16BC4CF5EA8 /* Pods_ARFlightTracker_iOS_Swift.framework */,
+				9ADC2DED20F56EC4C2697D6A /* Pods_ARFlightTracker_iOS_SwiftTests.framework */,
+				910064F3BAB977E37097D594 /* Pods_ARFlightTracker_iOS_SwiftUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F7FC3D6BC8A00DF1AC6EDF9B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ED79BA4636D3551A4BFA9DF6 /* Pods-ARFlightTracker-iOS-Swift.debug.xcconfig */,
+				57CDB0E44E120C0CA09D28DF /* Pods-ARFlightTracker-iOS-Swift.release.xcconfig */,
+				78A7C2C37FA45A3B17B65CD8 /* Pods-ARFlightTracker-iOS-SwiftTests.debug.xcconfig */,
+				C2062092E7F941DAB0F09548 /* Pods-ARFlightTracker-iOS-SwiftTests.release.xcconfig */,
+				475BC1D5096C7EC9E9A0BDB3 /* Pods-ARFlightTracker-iOS-SwiftUITests.debug.xcconfig */,
+				79A5E3CAEFCA21DD12C3D057 /* Pods-ARFlightTracker-iOS-SwiftUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B4228FED1DDA7C8E008292C7 /* ARFlightTracker-iOS-Swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B42290161DDA7C8E008292C7 /* Build configuration list for PBXNativeTarget "ARFlightTracker-iOS-Swift" */;
+			buildPhases = (
+				C7D61BFA3B90F9DE36A1619D /* [CP] Check Pods Manifest.lock */,
+				B4228FEA1DDA7C8E008292C7 /* Sources */,
+				B4228FEB1DDA7C8E008292C7 /* Frameworks */,
+				B4228FEC1DDA7C8E008292C7 /* Resources */,
+				61F597FFC4938064A6968BDE /* [CP] Embed Pods Frameworks */,
+				41701513748FADA4C3686F41 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ARFlightTracker-iOS-Swift";
+			productName = IBMFlightTracker;
+			productReference = B4228FEE1DDA7C8E008292C7 /* ARFlightTracker-iOS-Swift.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B42290011DDA7C8E008292C7 /* ARFlightTracker-iOS-SwiftTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B42290191DDA7C8E008292C7 /* Build configuration list for PBXNativeTarget "ARFlightTracker-iOS-SwiftTests" */;
+			buildPhases = (
+				16A28F5D3F4BE076AAA18377 /* [CP] Check Pods Manifest.lock */,
+				B4228FFE1DDA7C8E008292C7 /* Sources */,
+				B4228FFF1DDA7C8E008292C7 /* Frameworks */,
+				B42290001DDA7C8E008292C7 /* Resources */,
+				3480551D13EB1907186B1C8C /* [CP] Embed Pods Frameworks */,
+				B8F051104CF61F425D705DAE /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B42290041DDA7C8E008292C7 /* PBXTargetDependency */,
+			);
+			name = "ARFlightTracker-iOS-SwiftTests";
+			productName = IBMFlightTrackerTests;
+			productReference = B42290021DDA7C8E008292C7 /* ARFlightTracker-iOS-SwiftTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B422900C1DDA7C8E008292C7 /* ARFlightTracker-iOS-SwiftUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B422901C1DDA7C8E008292C7 /* Build configuration list for PBXNativeTarget "ARFlightTracker-iOS-SwiftUITests" */;
+			buildPhases = (
+				4A812869BA91B75EE5985091 /* [CP] Check Pods Manifest.lock */,
+				B42290091DDA7C8E008292C7 /* Sources */,
+				B422900A1DDA7C8E008292C7 /* Frameworks */,
+				B422900B1DDA7C8E008292C7 /* Resources */,
+				6D412227C50C228F94D8688B /* [CP] Embed Pods Frameworks */,
+				B16DE85B7E4AB5098D61DDD6 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B422900F1DDA7C8E008292C7 /* PBXTargetDependency */,
+			);
+			name = "ARFlightTracker-iOS-SwiftUITests";
+			productName = IBMFlightTrackerUITests;
+			productReference = B422900D1DDA7C8E008292C7 /* ARFlightTracker-iOS-SwiftUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B4228FE61DDA7C8E008292C7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "Sanjeev Ghimire";
+				TargetAttributes = {
+					B4228FED1DDA7C8E008292C7 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 8T393AQ955;
+						ProvisioningStyle = Automatic;
+					};
+					B42290011DDA7C8E008292C7 = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = B4228FED1DDA7C8E008292C7;
+					};
+					B422900C1DDA7C8E008292C7 = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = B4228FED1DDA7C8E008292C7;
+					};
+				};
+			};
+			buildConfigurationList = B4228FE91DDA7C8E008292C7 /* Build configuration list for PBXProject "ARFlightTracker-iOS-Swift" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B4228FE51DDA7C8E008292C7;
+			productRefGroup = B4228FEF1DDA7C8E008292C7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B4228FED1DDA7C8E008292C7 /* ARFlightTracker-iOS-Swift */,
+				B42290011DDA7C8E008292C7 /* ARFlightTracker-iOS-SwiftTests */,
+				B422900C1DDA7C8E008292C7 /* ARFlightTracker-iOS-SwiftUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B4228FEC1DDA7C8E008292C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B46C66271DF7685500D3FD12 /* Main.storyboard in Resources */,
+				B49E10631E259DF3002F8051 /* radar.png in Resources */,
+				B42290291DDCEE01008292C7 /* TestFlights.json in Resources */,
+				B45FBB091DE65E2800DF2708 /* FlightCalloutView.xib in Resources */,
+				B49E10611E24410D002F8051 /* box.png in Resources */,
+				405EB7521DEDFE93005D7206 /* plane.png in Resources */,
+				B49E10651E259E07002F8051 /* radar_dot.png in Resources */,
+				B4A177931E00C0EE0015A848 /* compass.png in Resources */,
+				B426D9101E3FCD840085B3D8 /* Info.plist in Resources */,
+				B46C66241DF7550600D3FD12 /* close.png in Resources */,
+				B426D90F1E303D4C0085B3D8 /* bubble.png in Resources */,
+				B4228FF91DDA7C8E008292C7 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B42290001DDA7C8E008292C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B422900B1DDA7C8E008292C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		16A28F5D3F4BE076AAA18377 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		3480551D13EB1907186B1C8C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ARFlightTracker-iOS-SwiftTests/Pods-ARFlightTracker-iOS-SwiftTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		41701513748FADA4C3686F41 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ARFlightTracker-iOS-Swift/Pods-ARFlightTracker-iOS-Swift-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4A812869BA91B75EE5985091 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		61F597FFC4938064A6968BDE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ARFlightTracker-iOS-Swift/Pods-ARFlightTracker-iOS-Swift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6D412227C50C228F94D8688B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ARFlightTracker-iOS-SwiftUITests/Pods-ARFlightTracker-iOS-SwiftUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B16DE85B7E4AB5098D61DDD6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ARFlightTracker-iOS-SwiftUITests/Pods-ARFlightTracker-iOS-SwiftUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B8F051104CF61F425D705DAE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ARFlightTracker-iOS-SwiftTests/Pods-ARFlightTracker-iOS-SwiftTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C7D61BFA3B90F9DE36A1619D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B4228FEA1DDA7C8E008292C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B49E10451E1F017E002F8051 /* MarkerView.m in Sources */,
+				B4228FF41DDA7C8E008292C7 /* ViewController.swift in Sources */,
+				B49E105C1E2412F8002F8051 /* ARObjectView.m in Sources */,
+				B41FFF301E0DC23100C7EDF1 /* ARViewHelper.swift in Sources */,
+				B45FBB0D1DE663A000DF2708 /* FlightCalloutView.swift in Sources */,
+				B46C66151DF5FF3E00D3FD12 /* ARFlightViewController.swift in Sources */,
+				B49E105F1E241609002F8051 /* ARFlightViewController_v1.swift in Sources */,
+				B426D90D1E2848B20085B3D8 /* FlightBubble.swift in Sources */,
+				B49E105D1E2412F8002F8051 /* RadarView.m in Sources */,
+				B42290221DDB968A008292C7 /* FlightInfo.swift in Sources */,
+				B42290321DDE538E008292C7 /* MQTTConnection.swift in Sources */,
+				B42290201DDB92C4008292C7 /* FlightAnnotation.swift in Sources */,
+				B49E105B1E2412F8002F8051 /* ARGeoCoordinate.m in Sources */,
+				B46C66171DF5FF5500D3FD12 /* ARFlightAnnotationView.swift in Sources */,
+				B49E10581E2412F8002F8051 /* ARKitConfig.m in Sources */,
+				B49E105A1E2412F8002F8051 /* LocalizationHelper.m in Sources */,
+				B46C661C1DF6006200D3FD12 /* ARFlightConfiguration.swift in Sources */,
+				B4228FF21DDA7C8E008292C7 /* AppDelegate.swift in Sources */,
+				B46C661E1DF6048900D3FD12 /* ARTrackingManager.swift in Sources */,
+				B46C66191DF5FFC700D3FD12 /* ARFlightAnnotation.swift in Sources */,
+				B46C66221DF74B7900D3FD12 /* ARFlightAnnotationCustom.swift in Sources */,
+				B46C66201DF6107C00D3FD12 /* FlightMapViewController.swift in Sources */,
+				B49E10591E2412F8002F8051 /* ARKitEngine.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4228FFE1DDA7C8E008292C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B42290071DDA7C8E008292C7 /* ARFlightTracker-iOS-SwiftTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B42290091DDA7C8E008292C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B42290121DDA7C8E008292C7 /* ARFlightTracker-iOS-SwiftUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B42290041DDA7C8E008292C7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B4228FED1DDA7C8E008292C7 /* ARFlightTracker-iOS-Swift */;
+			targetProxy = B42290031DDA7C8E008292C7 /* PBXContainerItemProxy */;
+		};
+		B422900F1DDA7C8E008292C7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B4228FED1DDA7C8E008292C7 /* ARFlightTracker-iOS-Swift */;
+			targetProxy = B422900E1DDA7C8E008292C7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B46C66251DF7685500D3FD12 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B46C66261DF7685500D3FD12 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B42290141DDA7C8E008292C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/IBMFlightTracker/IBMFlightTracker-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B42290151DDA7C8E008292C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/IBMFlightTracker/IBMFlightTracker-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B42290171DDA7C8E008292C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED79BA4636D3551A4BFA9DF6 /* Pods-ARFlightTracker-iOS-Swift.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 8T393AQ955;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = "$(inherited)";
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = IBMFlightTracker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ibm.IBMFlightTracker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		B42290181DDA7C8E008292C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 57CDB0E44E120C0CA09D28DF /* Pods-ARFlightTracker-iOS-Swift.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 8T393AQ955;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = "$(inherited)";
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = IBMFlightTracker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ibm.IBMFlightTracker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		B422901A1DDA7C8E008292C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78A7C2C37FA45A3B17B65CD8 /* Pods-ARFlightTracker-iOS-SwiftTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = IBMFlightTrackerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ibm.IBMFlightTrackerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ARFlightTracker-iOS-Swift.app/ARFlightTracker-iOS-Swift";
+			};
+			name = Debug;
+		};
+		B422901B1DDA7C8E008292C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C2062092E7F941DAB0F09548 /* Pods-ARFlightTracker-iOS-SwiftTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = IBMFlightTrackerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ibm.IBMFlightTrackerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ARFlightTracker-iOS-Swift.app/ARFlightTracker-iOS-Swift";
+			};
+			name = Release;
+		};
+		B422901D1DDA7C8E008292C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 475BC1D5096C7EC9E9A0BDB3 /* Pods-ARFlightTracker-iOS-SwiftUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = IBMFlightTrackerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ibm.IBMFlightTrackerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = IBMFlightTracker;
+			};
+			name = Debug;
+		};
+		B422901E1DDA7C8E008292C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 79A5E3CAEFCA21DD12C3D057 /* Pods-ARFlightTracker-iOS-SwiftUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = IBMFlightTrackerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ibm.IBMFlightTrackerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = IBMFlightTracker;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B4228FE91DDA7C8E008292C7 /* Build configuration list for PBXProject "ARFlightTracker-iOS-Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B42290141DDA7C8E008292C7 /* Debug */,
+				B42290151DDA7C8E008292C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B42290161DDA7C8E008292C7 /* Build configuration list for PBXNativeTarget "ARFlightTracker-iOS-Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B42290171DDA7C8E008292C7 /* Debug */,
+				B42290181DDA7C8E008292C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B42290191DDA7C8E008292C7 /* Build configuration list for PBXNativeTarget "ARFlightTracker-iOS-SwiftTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B422901A1DDA7C8E008292C7 /* Debug */,
+				B422901B1DDA7C8E008292C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B422901C1DDA7C8E008292C7 /* Build configuration list for PBXNativeTarget "ARFlightTracker-iOS-SwiftUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B422901D1DDA7C8E008292C7 /* Debug */,
+				B422901E1DDA7C8E008292C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B4228FE61DDA7C8E008292C7 /* Project object */;
+}

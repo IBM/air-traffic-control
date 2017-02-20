@@ -1,0 +1,29 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.ibm.iot</groupId>
+  <artifactId>air.traffic.control</artifactId>
+  <version>develop-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <name>Cloud-based Air Traffic Control</name>
+  <url>https://github.com/ibm/air-traffic-control</url>
+
+  <scm>
+    <url>https://github.com/ibm/air-traffic-control</url>
+    <connection>scm:git:https://github.com/ibm/air-traffic-control.git</connection>
+  </scm>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <junit.version>4.12-beta-1</junit.version>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <require.java.version>1.8+</require.java.version>
+  </properties>
+
+  <modules>
+    <module>adsb.ground.station</module>
+  </modules>
+</project>
