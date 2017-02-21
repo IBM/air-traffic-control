@@ -31,7 +31,6 @@ import com.ibm.iotf.client.app.ApplicationClient;
 
 public class IotClient {
     private static final String MAC_ADDRESS = computeMacAddress();
-
     private static final String APP_PROPERTIES_FILE_NAME = "/application.properties";
     private static final Properties APP_PROPERTIES = loadProperties(APP_PROPERTIES_FILE_NAME);
 
@@ -104,6 +103,7 @@ public class IotClient {
     public static String getMacAddress() {
         return MAC_ADDRESS;
     }
+
     private static Properties loadProperties(String propertiesFileName) {
         Properties props = new Properties();
         try {
@@ -143,5 +143,4 @@ public class IotClient {
         }
         return sb.toString();
     }
-
 }
