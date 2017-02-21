@@ -1,5 +1,4 @@
 # air-traffic-control
-[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/IBM/air-traffic-control?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![Build Status][build-status-image]][build-status]
 [build-status-image]: https://travis-ci.org/IBM/air-traffic-control.svg?branch=master
 [build-status]: https://travis-ci.org/IBM/air-traffic-control
