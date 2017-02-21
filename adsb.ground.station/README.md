@@ -1,6 +1,6 @@
 # adsb.ground.station
 
-Raspberry Pi powered ground station for commercial flights that does the following:
+Raspberry Pi powered Ground Station for commercial flights that does the following:
 
  * _receives_ [Automatic Dependent Surveillance-Broadcast(ADS-B)]
  (http://airfactsjournal.com/2013/01/ads-b-101-what-it-is-and-why-you-should-care/) messages
@@ -26,11 +26,11 @@ receive ADS-B messages from commercial flights and decode them but also to publi
 MQTT messages to IBM Bluemix IoT Platform.
 
 The following sections describe in great detail how to set up Raspberry Pi 3 so that it can publish
-information about commercial flights in it's vicinity over IBM Cloud. One can imagine a whole bunch
-of such Raspberry Pi 3 powered ADS-B ground stations that can track aircraft in 100-150mile radius
-scattered all over the world publishing messages to create modern airline traffic controller in
-IBM Cloud and perhaps replacing the out-dated radar technology that is currently used by the
-conventional airline traffic controllers.
+information about commercial flights in it's vicinity over IBM Bluemix. One can imagine a whole bunch
+of such Raspberry Pi powered ADS-B Ground Stations that can track aircraft in 100-150mile radius
+scattered all over the world publishing messages to create modern Air Traffic Controls in
+IBM Bluemix and perhaps replacing the out-dated radar technology that is currently used by the
+conventional Air Traffic Controls.
 
 ## Hardware Requirements
  * Raspberry Pi 3 with at least 32GB SD card
@@ -190,7 +190,7 @@ $ cd ~/dump1090
 $ make
 ```
 
-Now your Raspberry Pi 3 is ready to be a ADS-B ground station! You can confirm whether the SDR
+Now your Raspberry Pi 3 is ready to be a ADS-B Ground Station! You can confirm whether the SDR
 device connected to the USB port is being recognized by Raspberry Pi 3 as shown below:
 
 ```
