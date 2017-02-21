@@ -16,6 +16,11 @@
 package com.ibm.iot.adsb.ground.station;
 
 import java.io.IOException;
+import java.net.InetAddress;
+import java.net.NetworkInterface;
+import java.net.SocketException;
+import java.net.UnknownHostException;
+import java.util.Enumeration;
 import java.util.Properties;
 
 import org.slf4j.Logger;
@@ -25,6 +30,8 @@ import com.google.gson.JsonObject;
 import com.ibm.iotf.client.app.ApplicationClient;
 
 public class IotClient {
+    private static final String MAC_ADDRESS = computeMacAddress();
+
     private static final String APP_PROPERTIES_FILE_NAME = "/application.properties";
     private static final Properties APP_PROPERTIES = loadProperties(APP_PROPERTIES_FILE_NAME);
 
@@ -45,7 +52,9 @@ public class IotClient {
         // Specify unique "id" so that multiple instances of this app can concurrently publish MQTT
         // messages on behalf of the same IoT device without requiring a hardcoded entry in the
         // properties file.
-        APP_PROPERTIES.setProperty("id", String.valueOf(System.currentTimeMillis()));
+        APP_PROPERTIES.setProperty("id", MAC_ADDRESS +
+                                         "-" +
+                                         String.valueOf(System.currentTimeMillis()));
     }
 
     public void connect() throws IOException {
@@ -92,6 +101,9 @@ public class IotClient {
         logger.info("Published MQTT message");
     }
 
+    public static String getMacAddress() {
+        return MAC_ADDRESS;
+    }
     private static Properties loadProperties(String propertiesFileName) {
         Properties props = new Properties();
         try {
@@ -104,4 +116,32 @@ public class IotClient {
 
         return props;
     }
+
+    private static String computeMacAddress() {
+        StringBuilder sb = new StringBuilder();
+
+        try {
+            InetAddress ip = InetAddress.getLocalHost();
+            System.out.println("IP address : " + ip.getHostAddress());
+
+            Enumeration<NetworkInterface> networks = NetworkInterface.getNetworkInterfaces();
+            while (networks.hasMoreElements()) {
+                NetworkInterface network = networks.nextElement();
+                byte[] mac = network.getHardwareAddress();
+
+                if (mac != null) {
+                    System.out.print("MAC address : ");
+                    for (int i = 0; i < mac.length; i++) {
+                        sb.append(String.format("%02X", mac[i]));
+                    }
+                    System.out.println(sb.toString());
+                    return sb.toString();
+                }
+            }
+        } catch (UnknownHostException | SocketException e) {
+            e.printStackTrace();
+        }
+        return sb.toString();
+    }
+
 }

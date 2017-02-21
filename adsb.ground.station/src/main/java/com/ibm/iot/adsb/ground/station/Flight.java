@@ -17,12 +17,6 @@ package com.ibm.iot.adsb.ground.station;
 
 import static java.lang.String.format;
 
-import java.net.InetAddress;
-import java.net.NetworkInterface;
-import java.net.SocketException;
-import java.net.UnknownHostException;
-import java.util.Enumeration;
-
 import org.opensky.libadsb.PositionDecoder;
 
 import com.google.gson.JsonObject;
@@ -32,7 +26,6 @@ public class Flight {
         CACHED, NEW
     }
 
-    private static final String SENSOR_MAC_ADDRESS = getMacAddress();
     private static final String SCHEMA_TYPE = "ar_flights_schema";
     private static final String PROPERTY_ICAO = "icao";
     private static final String PROPERTY_ALTITUDE = "altitudeInMeters";
@@ -40,11 +33,11 @@ public class Flight {
     private static final String PROPERTY_HEADING = "headingInDegrees";
     private static final String PROPERTY_LATITUDE = "latitude";
     private static final String PROPERTY_LONGITUDE = "longitude";
-    private static final String PROPERTY_MAC_ADDRESS = "sensorMacAddress";
     private static final String PROPERTY_SCHEMA_TYPE = "type";
     private static final String PROPERTY_VELOCITY = "velocityInMetersPerSecond";
     private static final String PROPERTY_CREATE_TIMESTAMP = "createdInMillis";
     private static final String PROPERTY_LAST_UPDATED_TIMESTAMP = "lastUpdatedInMillis";
+    private static final String PROPERTY_GROUND_STATION_ID = "groundStationId";
 
     private static final String JSON_MESSAGE_FORMAT =
                                          "{ " +
@@ -54,7 +47,7 @@ public class Flight {
                                               "\"headingInDegrees\" : " + "%f, " +
                                               "\"latitude\" : " + "%f, " +
                                               "\"longitude\" : " + "%f, " +
-                                              "\"sensorMacAddress\" : " + "\"%s\", " +
+                                              "\"groundStationId\" : " + "\"%s\", " +
                                               "\"type\" : " + "\"%s\", " +
                                               "\"velocityInMetersPerSecond\" : " + "%f, " +
                                               "\"createdInMillis\" : " + "%d, " +
@@ -173,7 +166,7 @@ public class Flight {
         jsonObject.addProperty(PROPERTY_HEADING, headingInDegrees);
         jsonObject.addProperty(PROPERTY_LATITUDE, latitude);
         jsonObject.addProperty(PROPERTY_LONGITUDE, longitude);
-        jsonObject.addProperty(PROPERTY_MAC_ADDRESS, SENSOR_MAC_ADDRESS);
+        jsonObject.addProperty(PROPERTY_GROUND_STATION_ID, IotClient.getMacAddress());
         jsonObject.addProperty(PROPERTY_SCHEMA_TYPE, SCHEMA_TYPE);
         jsonObject.addProperty(PROPERTY_VELOCITY, velocityInMetersPerSecond);
         jsonObject.addProperty(PROPERTY_CREATE_TIMESTAMP, createdInMillis);
@@ -193,7 +186,7 @@ public class Flight {
                              headingInDegrees, 
                              latitude,
                              longitude,
-                             SENSOR_MAC_ADDRESS,
+                             IotClient.getMacAddress(),
                              SCHEMA_TYPE,
                              velocityInMetersPerSecond,
                              createdInMillis,
@@ -204,33 +197,6 @@ public class Flight {
 
     public String toString() {
         return toJSON();
-    }
-
-    private static String getMacAddress() {
-        StringBuilder sb = new StringBuilder();
-
-        try {
-            InetAddress ip = InetAddress.getLocalHost();
-            System.out.println("Current IP address : " + ip.getHostAddress());
-
-            Enumeration<NetworkInterface> networks = NetworkInterface.getNetworkInterfaces();
-            while (networks.hasMoreElements()) {
-                NetworkInterface network = networks.nextElement();
-                byte[] mac = network.getHardwareAddress();
-
-                if (mac != null) {
-                    System.out.print("Current MAC address : ");
-                    for (int i = 0; i < mac.length; i++) {
-                        sb.append(String.format("%02X%s", mac[i], (i < mac.length - 1) ? "-" : ""));
-                    }
-                    System.out.println(sb.toString());
-                    return sb.toString();
-                }
-            }
-        } catch (UnknownHostException | SocketException e) {
-            e.printStackTrace();
-        }
-        return sb.toString();
     }
 
     public State getState() {
