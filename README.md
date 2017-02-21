@@ -1,7 +1,7 @@
 # air-traffic-control
 
-[build-status-image]: https://travis-ci.org/ibm/air-traffic-control.svg?branch=master
-[build-status]: https://travis-ci.org/ibm/air-traffic-control
+[build-status-image]: https://travis-ci.org/IBM/air-traffic-control.svg?branch=master
+[build-status]: https://travis-ci.org/IBM/air-traffic-control
 
 This repository contains instructions to build modern Cloud-based Air Traffic Control using IBM Bluemix.
 
