@@ -261,16 +261,8 @@ $ mvn clean install
 ```
 
 The `adsb.ground.station/target` folder will contain the executable jar 
-`adsb.ground.station/target-default-SNAPSHOT.jar` specifically targeted for the device whose
-registration details are specified in the `device.properties` file. Since a device can maintain
-only one connection with IoT Platform, only one instance of the executable jar file should be
-running at any time.
-
-If multiple instances of the executable jar need to be running concurrently on different machines,
-then separate devices should be registered with the IoT Platform. Then, `device.properties` file
-should be updated with the device-specific registration details and a unique executable jar
-specifically targeted for the device should be created using `mvn clean install`.
-
+`adsb.ground.station-develop-SNAPSHOT.jar` specifically targeted for the IoT Platform service
+and the device whose details are specified in `src/main/resources/application.properties` file.
 
 ## Running `adsb.ground.station` Client
 
@@ -281,6 +273,8 @@ Once the executable jar is built, running it on Raspberry Pi 3 is very simple:
 ```
 $ java -cp . -jar adsb.ground.station-develop-SNAPSHOT.jar
 ```
+
+Make sure that the `Dump1090 Server` is up and running before running the aforementioned command.
 
 ### Client and Server Running on Separate Hosts
 
@@ -293,6 +287,8 @@ $ java -cp . -jar adsb.ground.station-develop-SNAPSHOT.jar --host 192.168.1.10 -
 ```
 
 where 192.168.1.10 is the IP address of the Raspberry Pi 3 on which `Dump1090 Server` is running.
+
+Make sure that the `Dump1090 Server` is up and running before running the aforementioned command.
 
 ### Simulate SDR
 
