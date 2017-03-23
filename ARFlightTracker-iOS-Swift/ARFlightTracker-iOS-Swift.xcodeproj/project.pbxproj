@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		405EB7521DEDFE93005D7206 /* plane.png in Resources */ = {isa = PBXBuildFile; fileRef = 405EB7511DEDFE93005D7206 /* plane.png */; };
-		838EB5E2A8B2B1C544E78587 /* Pods_ARFlightTracker_iOS_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8BF64170D16C16BC4CF5EA8 /* Pods_ARFlightTracker_iOS_Swift.framework */; };
-		8B498A632771FB95378C9BFD /* Pods_ARFlightTracker_iOS_SwiftUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 910064F3BAB977E37097D594 /* Pods_ARFlightTracker_iOS_SwiftUITests.framework */; };
-		A0B9DD0467F7701F676A9187 /* Pods_ARFlightTracker_iOS_SwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ADC2DED20F56EC4C2697D6A /* Pods_ARFlightTracker_iOS_SwiftTests.framework */; };
 		B41FFF301E0DC23100C7EDF1 /* ARViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41FFF2F1E0DC23100C7EDF1 /* ARViewHelper.swift */; };
 		B4228FF21DDA7C8E008292C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4228FF11DDA7C8E008292C7 /* AppDelegate.swift */; };
 		B4228FF41DDA7C8E008292C7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4228FF31DDA7C8E008292C7 /* ViewController.swift */; };
@@ -48,6 +45,7 @@
 		B49E10631E259DF3002F8051 /* radar.png in Resources */ = {isa = PBXBuildFile; fileRef = B49E10621E259DF3002F8051 /* radar.png */; };
 		B49E10651E259E07002F8051 /* radar_dot.png in Resources */ = {isa = PBXBuildFile; fileRef = B49E10641E259E07002F8051 /* radar_dot.png */; };
 		B4A177931E00C0EE0015A848 /* compass.png in Resources */ = {isa = PBXBuildFile; fileRef = B4A177921E00C0EE0015A848 /* compass.png */; };
+		B4C0E4251E8472FD002583D4 /* RestCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C0E4241E8472FD002583D4 /* RestCall.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,13 +66,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		076A0A51B62CE491BD370B07 /* Pods-ARFlightTracker-iOS-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARFlightTracker-iOS-Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ARFlightTracker-iOS-Swift/Pods-ARFlightTracker-iOS-Swift.debug.xcconfig"; sourceTree = "<group>"; };
 		405EB7511DEDFE93005D7206 /* plane.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plane.png; sourceTree = "<group>"; };
-		475BC1D5096C7EC9E9A0BDB3 /* Pods-ARFlightTracker-iOS-SwiftUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARFlightTracker-iOS-SwiftUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ARFlightTracker-iOS-SwiftUITests/Pods-ARFlightTracker-iOS-SwiftUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		57CDB0E44E120C0CA09D28DF /* Pods-ARFlightTracker-iOS-Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARFlightTracker-iOS-Swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-ARFlightTracker-iOS-Swift/Pods-ARFlightTracker-iOS-Swift.release.xcconfig"; sourceTree = "<group>"; };
-		78A7C2C37FA45A3B17B65CD8 /* Pods-ARFlightTracker-iOS-SwiftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARFlightTracker-iOS-SwiftTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ARFlightTracker-iOS-SwiftTests/Pods-ARFlightTracker-iOS-SwiftTests.debug.xcconfig"; sourceTree = "<group>"; };
-		79A5E3CAEFCA21DD12C3D057 /* Pods-ARFlightTracker-iOS-SwiftUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARFlightTracker-iOS-SwiftUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ARFlightTracker-iOS-SwiftUITests/Pods-ARFlightTracker-iOS-SwiftUITests.release.xcconfig"; sourceTree = "<group>"; };
-		910064F3BAB977E37097D594 /* Pods_ARFlightTracker_iOS_SwiftUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ARFlightTracker_iOS_SwiftUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9ADC2DED20F56EC4C2697D6A /* Pods_ARFlightTracker_iOS_SwiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ARFlightTracker_iOS_SwiftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		508E4E11D1E4205049267077 /* Pods-ARFlightTracker-iOS-SwiftUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARFlightTracker-iOS-SwiftUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ARFlightTracker-iOS-SwiftUITests/Pods-ARFlightTracker-iOS-SwiftUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		71F1334868A0EDC22ECB7C15 /* Pods-ARFlightTracker-iOS-Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARFlightTracker-iOS-Swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-ARFlightTracker-iOS-Swift/Pods-ARFlightTracker-iOS-Swift.release.xcconfig"; sourceTree = "<group>"; };
+		79137D287931984886CD926B /* Pods-ARFlightTracker-iOS-SwiftUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARFlightTracker-iOS-SwiftUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ARFlightTracker-iOS-SwiftUITests/Pods-ARFlightTracker-iOS-SwiftUITests.release.xcconfig"; sourceTree = "<group>"; };
+		B29B38A371D6DD1E2AA6F931 /* Pods-ARFlightTracker-iOS-SwiftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARFlightTracker-iOS-SwiftTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ARFlightTracker-iOS-SwiftTests/Pods-ARFlightTracker-iOS-SwiftTests.release.xcconfig"; sourceTree = "<group>"; };
 		B40BFF981E1ECD3400BA1CBD /* ARFlightTracker-iOS-Swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ARFlightTracker-iOS-Swift-Bridging-Header.h"; sourceTree = "<group>"; };
 		B41FFF2F1E0DC23100C7EDF1 /* ARViewHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARViewHelper.swift; sourceTree = "<group>"; };
 		B4228FEE1DDA7C8E008292C7 /* ARFlightTracker-iOS-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ARFlightTracker-iOS-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -129,9 +126,8 @@
 		B49E10621E259DF3002F8051 /* radar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = radar.png; sourceTree = "<group>"; };
 		B49E10641E259E07002F8051 /* radar_dot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = radar_dot.png; sourceTree = "<group>"; };
 		B4A177921E00C0EE0015A848 /* compass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = compass.png; path = ../../../Desktop/compass.png; sourceTree = "<group>"; };
-		C2062092E7F941DAB0F09548 /* Pods-ARFlightTracker-iOS-SwiftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARFlightTracker-iOS-SwiftTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ARFlightTracker-iOS-SwiftTests/Pods-ARFlightTracker-iOS-SwiftTests.release.xcconfig"; sourceTree = "<group>"; };
-		C8BF64170D16C16BC4CF5EA8 /* Pods_ARFlightTracker_iOS_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ARFlightTracker_iOS_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		ED79BA4636D3551A4BFA9DF6 /* Pods-ARFlightTracker-iOS-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARFlightTracker-iOS-Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ARFlightTracker-iOS-Swift/Pods-ARFlightTracker-iOS-Swift.debug.xcconfig"; sourceTree = "<group>"; };
+		B4C0E4241E8472FD002583D4 /* RestCall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RestCall.swift; path = "ARFlightTracker-iOS-Swift/RestCall.swift"; sourceTree = SOURCE_ROOT; };
+		BAF8D91A5AF5BA543EE501A7 /* Pods-ARFlightTracker-iOS-SwiftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARFlightTracker-iOS-SwiftTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ARFlightTracker-iOS-SwiftTests/Pods-ARFlightTracker-iOS-SwiftTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,7 +136,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B455F5DB1DDE7F97007EFF11 /* Security.framework in Frameworks */,
-				838EB5E2A8B2B1C544E78587 /* Pods_ARFlightTracker_iOS_Swift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,7 +143,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A0B9DD0467F7701F676A9187 /* Pods_ARFlightTracker_iOS_SwiftTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,13 +150,25 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B498A632771FB95378C9BFD /* Pods_ARFlightTracker_iOS_SwiftUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0656CBEEED29F68DB0EFEB54 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				076A0A51B62CE491BD370B07 /* Pods-ARFlightTracker-iOS-Swift.debug.xcconfig */,
+				71F1334868A0EDC22ECB7C15 /* Pods-ARFlightTracker-iOS-Swift.release.xcconfig */,
+				BAF8D91A5AF5BA543EE501A7 /* Pods-ARFlightTracker-iOS-SwiftTests.debug.xcconfig */,
+				B29B38A371D6DD1E2AA6F931 /* Pods-ARFlightTracker-iOS-SwiftTests.release.xcconfig */,
+				508E4E11D1E4205049267077 /* Pods-ARFlightTracker-iOS-SwiftUITests.debug.xcconfig */,
+				79137D287931984886CD926B /* Pods-ARFlightTracker-iOS-SwiftUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		B4228FE51DDA7C8E008292C7 = {
 			isa = PBXGroup;
 			children = (
@@ -171,7 +177,7 @@
 				B42290101DDA7C8E008292C7 /* ARFlightTracker-iOS-SwiftUITests */,
 				B4228FEF1DDA7C8E008292C7 /* Products */,
 				C058C9C65A06B3F7A4E4B393 /* Frameworks */,
-				F7FC3D6BC8A00DF1AC6EDF9B /* Pods */,
+				0656CBEEED29F68DB0EFEB54 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -278,6 +284,7 @@
 		B42290331DDE53C2008292C7 /* util */ = {
 			isa = PBXGroup;
 			children = (
+				B4C0E4241E8472FD002583D4 /* RestCall.swift */,
 				B42290311DDE538E008292C7 /* MQTTConnection.swift */,
 				B41FFF2F1E0DC23100C7EDF1 /* ARViewHelper.swift */,
 			);
@@ -344,24 +351,8 @@
 			children = (
 				B455F5DC1DDE7FC0007EFF11 /* XCTest.framework */,
 				B455F5D91DDE7F08007EFF11 /* Security.framework */,
-				C8BF64170D16C16BC4CF5EA8 /* Pods_ARFlightTracker_iOS_Swift.framework */,
-				9ADC2DED20F56EC4C2697D6A /* Pods_ARFlightTracker_iOS_SwiftTests.framework */,
-				910064F3BAB977E37097D594 /* Pods_ARFlightTracker_iOS_SwiftUITests.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		F7FC3D6BC8A00DF1AC6EDF9B /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				ED79BA4636D3551A4BFA9DF6 /* Pods-ARFlightTracker-iOS-Swift.debug.xcconfig */,
-				57CDB0E44E120C0CA09D28DF /* Pods-ARFlightTracker-iOS-Swift.release.xcconfig */,
-				78A7C2C37FA45A3B17B65CD8 /* Pods-ARFlightTracker-iOS-SwiftTests.debug.xcconfig */,
-				C2062092E7F941DAB0F09548 /* Pods-ARFlightTracker-iOS-SwiftTests.release.xcconfig */,
-				475BC1D5096C7EC9E9A0BDB3 /* Pods-ARFlightTracker-iOS-SwiftUITests.debug.xcconfig */,
-				79A5E3CAEFCA21DD12C3D057 /* Pods-ARFlightTracker-iOS-SwiftUITests.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -371,12 +362,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B42290161DDA7C8E008292C7 /* Build configuration list for PBXNativeTarget "ARFlightTracker-iOS-Swift" */;
 			buildPhases = (
-				C7D61BFA3B90F9DE36A1619D /* [CP] Check Pods Manifest.lock */,
+				62D445E6DB16FA820A960308 /* [CP] Check Pods Manifest.lock */,
 				B4228FEA1DDA7C8E008292C7 /* Sources */,
 				B4228FEB1DDA7C8E008292C7 /* Frameworks */,
 				B4228FEC1DDA7C8E008292C7 /* Resources */,
-				61F597FFC4938064A6968BDE /* [CP] Embed Pods Frameworks */,
-				41701513748FADA4C3686F41 /* [CP] Copy Pods Resources */,
+				4CB93D9FFD33E95176CD4061 /* [CP] Embed Pods Frameworks */,
+				AD47DA53FAEE61BC05AB0095 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -391,12 +382,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B42290191DDA7C8E008292C7 /* Build configuration list for PBXNativeTarget "ARFlightTracker-iOS-SwiftTests" */;
 			buildPhases = (
-				16A28F5D3F4BE076AAA18377 /* [CP] Check Pods Manifest.lock */,
+				D413DC5A2DE44B0AA38B7F58 /* [CP] Check Pods Manifest.lock */,
 				B4228FFE1DDA7C8E008292C7 /* Sources */,
 				B4228FFF1DDA7C8E008292C7 /* Frameworks */,
 				B42290001DDA7C8E008292C7 /* Resources */,
-				3480551D13EB1907186B1C8C /* [CP] Embed Pods Frameworks */,
-				B8F051104CF61F425D705DAE /* [CP] Copy Pods Resources */,
+				CB1E661EF3D7449811FF57F2 /* [CP] Embed Pods Frameworks */,
+				064940A9544C4F942D73E00D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -412,12 +403,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B422901C1DDA7C8E008292C7 /* Build configuration list for PBXNativeTarget "ARFlightTracker-iOS-SwiftUITests" */;
 			buildPhases = (
-				4A812869BA91B75EE5985091 /* [CP] Check Pods Manifest.lock */,
+				D2B081B1089D262B7857A95D /* [CP] Check Pods Manifest.lock */,
 				B42290091DDA7C8E008292C7 /* Sources */,
 				B422900A1DDA7C8E008292C7 /* Frameworks */,
 				B422900B1DDA7C8E008292C7 /* Resources */,
-				6D412227C50C228F94D8688B /* [CP] Embed Pods Frameworks */,
-				B16DE85B7E4AB5098D61DDD6 /* [CP] Copy Pods Resources */,
+				E086995908061EDE2A7CAB0B /* [CP] Embed Pods Frameworks */,
+				93C5CB46D0382E58A9FCE294 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -513,112 +504,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		16A28F5D3F4BE076AAA18377 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		3480551D13EB1907186B1C8C /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ARFlightTracker-iOS-SwiftTests/Pods-ARFlightTracker-iOS-SwiftTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		41701513748FADA4C3686F41 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ARFlightTracker-iOS-Swift/Pods-ARFlightTracker-iOS-Swift-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4A812869BA91B75EE5985091 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		61F597FFC4938064A6968BDE /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ARFlightTracker-iOS-Swift/Pods-ARFlightTracker-iOS-Swift-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6D412227C50C228F94D8688B /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ARFlightTracker-iOS-SwiftUITests/Pods-ARFlightTracker-iOS-SwiftUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B16DE85B7E4AB5098D61DDD6 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ARFlightTracker-iOS-SwiftUITests/Pods-ARFlightTracker-iOS-SwiftUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B8F051104CF61F425D705DAE /* [CP] Copy Pods Resources */ = {
+		064940A9544C4F942D73E00D /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -633,7 +519,22 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ARFlightTracker-iOS-SwiftTests/Pods-ARFlightTracker-iOS-SwiftTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C7D61BFA3B90F9DE36A1619D /* [CP] Check Pods Manifest.lock */ = {
+		4CB93D9FFD33E95176CD4061 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ARFlightTracker-iOS-Swift/Pods-ARFlightTracker-iOS-Swift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		62D445E6DB16FA820A960308 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -646,6 +547,96 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		93C5CB46D0382E58A9FCE294 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ARFlightTracker-iOS-SwiftUITests/Pods-ARFlightTracker-iOS-SwiftUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AD47DA53FAEE61BC05AB0095 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ARFlightTracker-iOS-Swift/Pods-ARFlightTracker-iOS-Swift-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CB1E661EF3D7449811FF57F2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ARFlightTracker-iOS-SwiftTests/Pods-ARFlightTracker-iOS-SwiftTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D2B081B1089D262B7857A95D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D413DC5A2DE44B0AA38B7F58 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E086995908061EDE2A7CAB0B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ARFlightTracker-iOS-SwiftUITests/Pods-ARFlightTracker-iOS-SwiftUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -674,6 +665,7 @@
 				B46C661C1DF6006200D3FD12 /* ARFlightConfiguration.swift in Sources */,
 				B4228FF21DDA7C8E008292C7 /* AppDelegate.swift in Sources */,
 				B46C661E1DF6048900D3FD12 /* ARTrackingManager.swift in Sources */,
+				B4C0E4251E8472FD002583D4 /* RestCall.swift in Sources */,
 				B46C66191DF5FFC700D3FD12 /* ARFlightAnnotation.swift in Sources */,
 				B46C66221DF74B7900D3FD12 /* ARFlightAnnotationCustom.swift in Sources */,
 				B46C66201DF6107C00D3FD12 /* FlightMapViewController.swift in Sources */,
@@ -821,10 +813,11 @@
 		};
 		B42290171DDA7C8E008292C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ED79BA4636D3551A4BFA9DF6 /* Pods-ARFlightTracker-iOS-Swift.debug.xcconfig */;
+			baseConfigurationReference = 076A0A51B62CE491BD370B07 /* Pods-ARFlightTracker-iOS-Swift.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 8T393AQ955;
@@ -841,10 +834,11 @@
 		};
 		B42290181DDA7C8E008292C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 57CDB0E44E120C0CA09D28DF /* Pods-ARFlightTracker-iOS-Swift.release.xcconfig */;
+			baseConfigurationReference = 71F1334868A0EDC22ECB7C15 /* Pods-ARFlightTracker-iOS-Swift.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 8T393AQ955;
@@ -861,7 +855,7 @@
 		};
 		B422901A1DDA7C8E008292C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 78A7C2C37FA45A3B17B65CD8 /* Pods-ARFlightTracker-iOS-SwiftTests.debug.xcconfig */;
+			baseConfigurationReference = BAF8D91A5AF5BA543EE501A7 /* Pods-ARFlightTracker-iOS-SwiftTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -876,7 +870,7 @@
 		};
 		B422901B1DDA7C8E008292C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C2062092E7F941DAB0F09548 /* Pods-ARFlightTracker-iOS-SwiftTests.release.xcconfig */;
+			baseConfigurationReference = B29B38A371D6DD1E2AA6F931 /* Pods-ARFlightTracker-iOS-SwiftTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -891,9 +885,11 @@
 		};
 		B422901D1DDA7C8E008292C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 475BC1D5096C7EC9E9A0BDB3 /* Pods-ARFlightTracker-iOS-SwiftUITests.debug.xcconfig */;
+			baseConfigurationReference = 508E4E11D1E4205049267077 /* Pods-ARFlightTracker-iOS-SwiftUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = IBMFlightTrackerUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ibm.IBMFlightTrackerUITests;
@@ -905,9 +901,11 @@
 		};
 		B422901E1DDA7C8E008292C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 79A5E3CAEFCA21DD12C3D057 /* Pods-ARFlightTracker-iOS-SwiftUITests.release.xcconfig */;
+			baseConfigurationReference = 79137D287931984886CD926B /* Pods-ARFlightTracker-iOS-SwiftUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = IBMFlightTrackerUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ibm.IBMFlightTrackerUITests;

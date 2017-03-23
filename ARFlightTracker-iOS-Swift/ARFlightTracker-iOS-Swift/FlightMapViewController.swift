@@ -13,9 +13,9 @@ import SwiftyJSON
 
 class FlightMapViewController:  ViewController, MKMapViewDelegate  {
     
-    @IBOutlet weak var mapView: MKMapView!        
+    @IBOutlet weak var mapView: MKMapView!
     
-    @IBOutlet weak var mapARSegmentControl: UISegmentedControl!        
+    @IBOutlet weak var mapARSegmentControl: UISegmentedControl!
     
     let annotationIdentifier = "AnnotationIdentifier"
     
@@ -94,10 +94,10 @@ class FlightMapViewController:  ViewController, MKMapViewDelegate  {
         flightAnnotations[flightAnnotation.title!]=flightAnnotation
     }
     
-   
+    
     
     //runs every 30seconds
-     @objc private func removeAnnotation(timer: Timer) {
+    @objc private func removeAnnotation(timer: Timer) {
         let flightAnnotation = timer.userInfo as! FlightAnnotation
         if flightAnnotation.lastUpdatedInMillis != nil {
             let diff = Int64(Date().timeIntervalSince1970*1000) - flightAnnotation.lastUpdatedInMillis
@@ -122,9 +122,8 @@ class FlightMapViewController:  ViewController, MKMapViewDelegate  {
         if(sender.selectedSegmentIndex == 0){
             showMapViewController()
         }else{
-            //load ar view controller.            
+            //load ar view controller.
             let arFlightViewController = ARFlightViewControllerV1()
-            arFlightViewController.userLocation = self.mapView.userLocation.location
             arFlightViewController.generateGeoCoordinatesFromFlightAnnotaiton(annotations: Array(flightAnnotations.values))
             arFlightViewController.startFlightARView()
         }
@@ -146,7 +145,8 @@ class FlightMapViewController:  ViewController, MKMapViewDelegate  {
         
         self.mapView.setRegion(region, animated: true)
         self.mapView.regionThatFits(region)
-                
+        
+        super.userLocation = location
         
         // stop updating current location
         self.locationManager.stopUpdatingLocation()
@@ -198,9 +198,31 @@ class FlightMapViewController:  ViewController, MKMapViewDelegate  {
         // update the flight annotations map
         flightAnnotations[flightAnnotation.title!]=flightAnnotation
         
+        
+        //weather data
+        
+        RestCall().fetchWeatherBasedOnCurrentLocation(latitude: String(flightAnnotation.coordinate.latitude),longitude: String(flightAnnotation.coordinate.longitude)){
+            (result: [String: Any]) in
+            
+            let weatherIconUrl: String = result["weatherIconUrl"] as! String
+            let imageUrl = URL(string: weatherIconUrl)
+            let data = try? Data(contentsOf: imageUrl!)
+            
+            DispatchQueue.main.async(execute: { () -> Void in
+                calloutView.currentCity.text = "\(result["city"]!)"
+                calloutView.weatherIcon.image = UIImage(data: data!)
+                calloutView.currentTemprature.text = "\(result["temperature"]!)°F"
+                calloutView.weatherDescription.text = "\(result["description"]!)"
+            })
+            
+            
+        }
+        
+        
         calloutView.center = CGPoint(x: view.bounds.size.width / 2, y: -calloutView.bounds.size.height*0.52)
         view.addSubview(calloutView)
         mapView.setCenter((view.annotation?.coordinate)!, animated: true)
+        
         
     }
     
@@ -233,7 +255,7 @@ class FlightMapViewController:  ViewController, MKMapViewDelegate  {
         annotationView.frame = CGRect(x: 0,y: 0,width: 150,height: 50)
         return annotationView;
     }
-
+    
     
     func addFlightAnnotationWithCallout(flightAnnotation: FlightAnnotation){
         let view = MKAnnotationView(annotation: flightAnnotation, reuseIdentifier: annotationIdentifier)
@@ -250,14 +272,24 @@ class FlightMapViewController:  ViewController, MKMapViewDelegate  {
     func createCalloutView(flightAnnotation: FlightAnnotation) -> FlightCalloutView {
         let views = Bundle.main.loadNibNamed("FlightCalloutView", owner: nil, options: nil)
         let calloutView = views?[0] as! FlightCalloutView
-        calloutView.flightName.text = flightAnnotation.callSign 
+        calloutView.flightName.text = flightAnnotation.callSign
         calloutView.altitudeInMeters.text = "\(flightAnnotation.altitude.roundTo(places: 2)) m"
         calloutView.velocityInMetersPerSecond.text = "\(flightAnnotation.speed.roundTo(places: 2)) m/s"
         calloutView.flightImage.image=flightAnnotation.image
+        
         return calloutView;
     }
     
     
+}
+
+func showActivityIndicatory(uiView: UIView, actInd: UIActivityIndicatorView) {
+    actInd.frame = CGRect(x: 0.0, y: 0.0, width: 40.0, height: 40.0);
+    actInd.center = uiView.center
+    actInd.hidesWhenStopped = true
+    actInd.activityIndicatorViewStyle = .gray
+    uiView.addSubview(actInd)
+    actInd.startAnimating()
 }
 
 extension Double {

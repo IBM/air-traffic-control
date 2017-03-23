@@ -13,7 +13,7 @@ import CoreLocation
 
 open class ViewController: UIViewController, CocoaMQTTDelegate,CLLocationManagerDelegate{
     
-    var flightTestMode : Bool = false
+    var flightTestMode : Bool = true
     
     var flightImage : [String : UIImage] = [:]
     
@@ -27,15 +27,17 @@ open class ViewController: UIViewController, CocoaMQTTDelegate,CLLocationManager
     
     var points : [ARGeoCoordinate] = []
     
-    var arKitEngine : ARKitEngine? = nil        
-
+    var arKitEngine : ARKitEngine? = nil
+    
+    open var userLocation: CLLocation?
+    
     override open func viewDidLoad()
     {
         super.viewDidLoad()
         
         if(!self.flightTestMode){
-        //connection to MQTT IoT
-        MQTTConnection().connectToMQTT(_delegate: self)
+            //connection to MQTT IoT
+            MQTTConnection().connectToMQTT(_delegate: self)
         }else{
             print("Running in Test Mode")
             readTestFlights()
@@ -68,7 +70,7 @@ open class ViewController: UIViewController, CocoaMQTTDelegate,CLLocationManager
         //print("didReceivedMessage: \(message.string) with id \(id)")
         
         if let flightInfoString = message.string!.data(using: .utf8, allowLossyConversion: false) {
-        
+            
             let json = JSON(data: flightInfoString)
             
             let flight = FlightInfo(json: json)!
@@ -77,7 +79,7 @@ open class ViewController: UIViewController, CocoaMQTTDelegate,CLLocationManager
             
             let lastUpdatedInMIllis: UnixTime  = flight.lastUpdatedInMillis
             
-            print("flight: \(flight.icao) | Longitude: \(flight.longitude) | Latitude: \(flight.latitude) | createdTS: \(createdMillis.toDayAndHour) | lastUpdateTS: \(lastUpdatedInMIllis.toDayAndHour)")
+            print("flight: \(flight.icao) | Longitude: \(flight.longitude) | Latitude: \(flight.latitude) | createdTS: \((createdMillis/1000).toDayAndHour) | lastUpdateTS: \((lastUpdatedInMIllis/1000).toDayAndHour)")
             
             let flightAnnotation = FlightAnnotation(coordinate:CLLocationCoordinate2D(latitude: flight.latitude,longitude: flight.longitude))
             flightAnnotation.title=flight.icao
@@ -138,14 +140,14 @@ open class ViewController: UIViewController, CocoaMQTTDelegate,CLLocationManager
     }
     
     
-            
+    
     func readTestFlights(){
         if let path = Bundle.main.path(forResource: "TestFlights", ofType: "json") {
             do {
                 let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .alwaysMapped)
                 let flightJSONObjects = JSON(data: data)
                 if flightJSONObjects != JSON.null {
-                   // print("jsonData:\(flightJSONObjects)")
+                    // print("jsonData:\(flightJSONObjects)")
                     
                     let flights = flightJSONObjects["flights"].arrayValue
                     for flight in flights {
@@ -161,6 +163,7 @@ open class ViewController: UIViewController, CocoaMQTTDelegate,CLLocationManager
                         flightAnnotation.lastUpdatedInMillis=flightInfo.lastUpdatedInMillis
                         flightAnnotation.heading=flightInfo.headingInDegrees
                         flightAnnotation.testFlight = true
+                        flightAnnotation.callSign=flightInfo.callSign
                         flightAnnotations[flightInfo.icao!] = flightAnnotation
                     }
                 } else {
@@ -172,11 +175,11 @@ open class ViewController: UIViewController, CocoaMQTTDelegate,CLLocationManager
         } else {
             print("Invalid filename/path.")
         }
-
+        
     }
     
     
-            
+    
 }
 
 typealias UnixTime = Int64
@@ -185,9 +188,6 @@ extension UnixTime {
     private func formatType(form: String) -> DateFormatter {
         let dateFormatter = DateFormatter()
         dateFormatter.locale = NSLocale(localeIdentifier: "en_US") as Locale!
-        dateFormatter.timeStyle = DateFormatter.Style.medium //Set time style
-        dateFormatter.dateStyle = DateFormatter.Style.medium //Set date style
-        dateFormatter.timeZone = NSTimeZone() as TimeZone!
         dateFormatter.dateFormat = form
         return dateFormatter
     }
