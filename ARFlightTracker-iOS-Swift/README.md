@@ -25,8 +25,12 @@ IBMFlightTracker is an iOS based app which tracks flight pushed by SDR/ADSB mess
      IOT_PORT = 1883 (DEFAULT)
      IOT_TOPIC = "iot-2/type/<DEVICE_TYPE>/id/<DEVICE_ID>/evt/flight/fmt/json"
  ```
- 
- 5. Build and Run
+ 5. Change weather api credentials in class util/RestCall to have access to IBM weather API. You have to go the IBM weather in    bluemix and create an app to get the credentials.
+ ```
+    private static let WEATHER_API_USERNAME : String = "<username>"
+    private static let WEATHER_API_PASSWORD : String = "<password>"
+ ```
+ 6. Build and Run
  
 # Test Mode:
 You can run the app in test mode to be independant of IBM Bluemix MQTT server. In ViewController you can set the flag 
