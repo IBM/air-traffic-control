@@ -1,7 +1,5 @@
 # air-traffic-control
-[![Build Status][build-status-image]][build-status]
-[build-status-image]: https://travis-ci.org/IBM/air-traffic-control.svg?branch=master
-[build-status]: https://travis-ci.org/IBM/air-traffic-control
+[![Build Status](https://travis-ci.org/IBM/air-traffic-control.svg?branch=master)](https://travis-ci.org/IBM/air-traffic-control)
 
 
 ## Overview
