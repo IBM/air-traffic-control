@@ -16,6 +16,7 @@ open class FlightAnnotation: NSObject, MKAnnotation {
     public var image: UIImage!
     public var speed: Double!
     public var altitude: Double!
+    
     // use on map view
     var calloutView: FlightCalloutView!
     var calloutOpen: Bool = false

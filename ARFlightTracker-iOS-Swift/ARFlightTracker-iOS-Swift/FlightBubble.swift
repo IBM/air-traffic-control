@@ -6,80 +6,99 @@
 //  Copyright © 2017 Sanjeev Ghimire. All rights reserved.
 //
 
-import Foundation
+
 import UIKit
 
-
-class FlightBubble: UIView {
+open class FlightBubble: ARAnnotationView, UIGestureRecognizerDelegate
+{
+    open var titleLabel: UILabel?
+    open var weatherImageView: UIImageView?
     
-    var color:UIColor = .gray
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    required convenience init(withColor frame: CGRect, color:UIColor? = nil) {
-        self.init(frame: frame)
-        
-        if let color = color {
-            self.color = color
+    override open func didMoveToSuperview()
+    {
+        super.didMoveToSuperview()
+        if self.titleLabel == nil
+        {
+            self.loadUi()
         }
     }
     
-    override func draw(_ rect: CGRect) {
+    func loadUi()
+    {
+        // Title label
+        self.titleLabel?.removeFromSuperview()
+        let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 10)
+        label.numberOfLines = 0
+        label.backgroundColor = UIColor.clear
+        label.textColor = UIColor.white
+        self.addSubview(label)
+        self.titleLabel = label
         
-        let HEIGHTOFPOPUPTRIANGLE:CGFloat = 20.0
-        let WIDTHOFPOPUPTRIANGLE:CGFloat = 40.0
-        let borderRadius:CGFloat = 8.0
-        let strokeWidth:CGFloat = 3.0
+        // weather image
+        self.weatherImageView?.removeFromSuperview()
+        let weatherImg = UIImageView()
+        self.weatherImageView = weatherImg
+        self.addSubview(weatherImg)
         
-        // Get the context
-        let context: CGContext = UIGraphicsGetCurrentContext()!
-        context.translateBy(x: 0.0, y: rect.maxY)
-        context.scaleBy(x: 1.0, y: -1.0)
-        //
-        let currentFrame: CGRect = self.bounds
-        context.setLineJoin(.round)
-        context.setLineWidth(strokeWidth)
-        context.setStrokeColor(red: 255, green: 255, blue: 255, alpha: 1.0)
-        context.setFillColor(red: 0, green: 0, blue: 0, alpha: 1)
+        // Other
+        self.backgroundColor = UIColor.black.withAlphaComponent(0.5)
+        self.layer.cornerRadius = 5
         
-        // Draw and fill the bubble
-        context.beginPath()
-        context.move(to: CGPoint.init(x: borderRadius + strokeWidth + 0.5, y: strokeWidth + HEIGHTOFPOPUPTRIANGLE + 0.5))
-        
-        context.addLine(to: CGPoint.init(x: round(currentFrame.size.width / 2.0 - WIDTHOFPOPUPTRIANGLE / 2.0) + 0.5, y: HEIGHTOFPOPUPTRIANGLE + strokeWidth + 0.5))
-        context.addLine(to: CGPoint.init(x: round(currentFrame.size.width / 2.0) + 0.5, y: strokeWidth + 0.5))
-        
-        context.addLine(to: CGPoint.init(x: round(currentFrame.size.width / 2.0 + WIDTHOFPOPUPTRIANGLE / 2.0) + 0.5, y: HEIGHTOFPOPUPTRIANGLE + strokeWidth + 0.5))
-        context.addArc(tangent1End: CGPoint.init(x: currentFrame.size.width - strokeWidth - 0.5, y: strokeWidth + HEIGHTOFPOPUPTRIANGLE + 0.5), tangent2End: CGPoint.init(x: currentFrame.size.width - strokeWidth - 0.5, y: currentFrame.size.height - strokeWidth - 0.5), radius: borderRadius - strokeWidth)
-        
-        context.addArc(tangent1End: CGPoint.init(x: currentFrame.size.width - strokeWidth - 0.5, y: currentFrame.size.height - strokeWidth - 0.5), tangent2End: CGPoint.init(x: round(currentFrame.size.width / 2.0 + WIDTHOFPOPUPTRIANGLE / 2.0) - strokeWidth + 0.5, y: currentFrame.size.height - strokeWidth - 0.5), radius: borderRadius - strokeWidth)
-        
-        context.addArc(tangent1End: CGPoint.init(x: strokeWidth + 0.5, y: currentFrame.size.height - strokeWidth - 0.5), tangent2End: CGPoint.init(x: strokeWidth + 0.5, y: HEIGHTOFPOPUPTRIANGLE + strokeWidth + 0.5), radius: borderRadius - strokeWidth)
-        
-        context.addArc(tangent1End: CGPoint.init(x: strokeWidth + 0.5, y: strokeWidth + HEIGHTOFPOPUPTRIANGLE + 0.5), tangent2End: CGPoint.init(x: currentFrame.size.width - strokeWidth - 0.5, y: HEIGHTOFPOPUPTRIANGLE + strokeWidth + 0.5), radius: borderRadius - strokeWidth)
-        
-        context.closePath()
-        context.drawPath(using: .fillStroke)
-        
-        // Draw a clipping path for the fill
-        context.beginPath()
-        context.move(to: CGPoint.init(x: borderRadius + strokeWidth + 0.5, y: round((currentFrame.size.height + HEIGHTOFPOPUPTRIANGLE) * 0.50) + 0.5))
-        
-        context.addArc(tangent1End: CGPoint.init(x: currentFrame.size.width - strokeWidth - 0.5, y: round((currentFrame.size.height + HEIGHTOFPOPUPTRIANGLE) * 0.50) + 0.5), tangent2End: CGPoint.init(x: currentFrame.size.width - strokeWidth - 0.5, y: currentFrame.size.height - strokeWidth - 0.5), radius: borderRadius - strokeWidth)
-        
-        context.addArc(tangent1End: CGPoint.init(x: currentFrame.size.width - strokeWidth - 0.5, y: currentFrame.size.height - strokeWidth - 0.5), tangent2End: CGPoint.init(x: round(currentFrame.size.width / 2.0 + WIDTHOFPOPUPTRIANGLE / 2.0) - strokeWidth + 0.5, y: currentFrame.size.height - strokeWidth - 0.5), radius: borderRadius - strokeWidth)
-        
-        context.addArc(tangent1End: CGPoint.init(x: strokeWidth + 0.5, y: currentFrame.size.height - strokeWidth - 0.5), tangent2End: CGPoint.init(x: strokeWidth + 0.5, y: HEIGHTOFPOPUPTRIANGLE + strokeWidth + 0.5), radius: borderRadius - strokeWidth)
-        
-        context.addArc(tangent1End: CGPoint.init(x: strokeWidth + 0.5, y: round((currentFrame.size.height + HEIGHTOFPOPUPTRIANGLE) * 0.50) + 0.5), tangent2End: CGPoint.init(x: currentFrame.size.width - strokeWidth - 0.5, y:  round((currentFrame.size.height + HEIGHTOFPOPUPTRIANGLE) * 0.50) + 0.5), radius: borderRadius - strokeWidth)
-        
-        context.closePath()
-        context.clip()
+        if self.annotation != nil
+        {
+            self.bindUi()
+        }
     }
+    
+    func layoutUi()
+    {
+        let buttonWidth: CGFloat = 40
+        let buttonHeight: CGFloat = 40
+        
+        self.titleLabel?.frame = CGRect(x: 10, y: 0, width: self.frame.size.width - buttonWidth - 5, height: self.frame.size.height);
+        self.weatherImageView?.frame = CGRect(x: self.frame.size.width - buttonWidth, y: self.frame.size.height/2 - buttonHeight/2, width: buttonWidth, height: buttonHeight);
+    }
+    
+    // This method is called whenever distance/azimuth is set
+    override open func bindUi()
+    {
+        if let annotation = self.annotation, let title = annotation.title
+        {
+            let distance = String(format:"%.0fm", annotation.radialDistance)
+            
+            var weatherMessage: String = ""
+            
+            RestCall().fetchWeatherBasedOnCurrentLocation(latitude: String(annotation.coordinate.latitude),longitude: String(annotation.coordinate.longitude)){
+                (result: [String: Any]) in
+                
+                let weatherIconUrl: String = result["weatherIconUrl"] as! String
+                let imageUrl = URL(string: weatherIconUrl)
+                let data = try? Data(contentsOf: imageUrl!)
+                let city = "\(result["city"]!)"
+                let image = UIImage(data: data!)
+                let currentTemp = "\(result["temperature"]!)°F"
+                let weatherDesc = "\(result["description"]!)"
+                
+                weatherMessage = String(format: "\nCity:%@, %@ %@", city,currentTemp,weatherDesc)
+                
+                DispatchQueue.main.async(execute: { () -> Void in
+                    self.weatherImageView?.image = image
+                    self.titleLabel?.text?.append(weatherMessage)
+                })
+                
+            }
+            
+            let text = String(format: "%@\nAlt: %.0f\nDst: %@", title, annotation.altitude, distance)
+            self.titleLabel?.text = text
+        }
+    }
+    
+    open override func layoutSubviews()
+    {
+        super.layoutSubviews()
+        self.layoutUi()
+    }
+    
+    
 }
