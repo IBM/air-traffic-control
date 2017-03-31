@@ -19,25 +19,6 @@ IoT Platform service will also be able to serve the flight information to all th
 
 The following sections try to zoom into the three main aspects of tracking flights in real­time ­­ RPi powered ADS­B Ground Station, Air Traffic Control in IBM Bluemix, and Swift­based iOS app to render flights using AR.
 
-## Included Components
-- Bluemix container service
-- Bluemix Weather service
-- Java SE Development Kit (JDK) 8 or higher
-- Maven 3.2.5 higher
-- Docker
-
-## Prerequisites
-- Swift 3
-- Xcode 8.0+
-- [CocoaPod](https://travis-ci.org/IBM/air-traffic-control)
-- CocoaMQTT - Note: moving to aphid client by IBM
-- SwiftyJSON
-- ARKit - (part of the code base)
-- Raspberry Pi 3
-- [NooElec's RTL-SDR receiver set with antenna](http://www.nooelec.com/store/sdr/sdr-receivers/nesdr-mini-2-plus.html)
-- RTL-SDR USB driver
-- Dump1090 decoder that tunes the SDR device to 1090MHz frequency, collects the data, and makes it available on port 30002.
-
 
 ## Steps
 
@@ -48,7 +29,7 @@ The instructions for building a Raspberry Pi powered Ground Station are [here](a
 # 2. Swift-based iOS App
 
 The instructions for tracking flights using Swift-based iOS app are [here](ARFlightTracker-iOS-Swift/README.md).
- 
+
 
 # License
 [Apache 2.0](LICENSE.txt)
