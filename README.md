@@ -30,3 +30,7 @@ The instructions for building a Raspberry Pi powered Ground Station are [here](h
 2. Swift-based iOS App
 
 The instructions for tracking flights using Swift-based iOS app are [here](https://github.com/IBM/air-traffic-control/blob/master/ARFlightTracker-iOS-Swift/README.md).
+
+# License
+
+[Apache 2.0](LICENSE.md)
