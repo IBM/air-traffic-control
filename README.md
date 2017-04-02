@@ -18,16 +18,11 @@ Following figure shows the high-level architecture of a Cloud-based Air Traffic 
 
 ![alt tag](https://github.com/IBM/air-traffic-control/blob/master/assets/architecture_diagram_v1.png)
 
-Use the following steps to build and deploy a modern Cloud-based Air-Traffic-Control:
-
-
-## Steps
-
-1. Raspberry Pi powered ADS-B Ground Station
+## Raspberry Pi powered ADS-B Ground Station
 
 The instructions for building a Raspberry Pi powered Ground Station are [here](https://github.com/IBM/air-traffic-control/blob/master/adsb.ground.station/README.md).
 
-2. Swift-based iOS App
+## Swift-based iOS App
 
 The instructions for tracking flights using Swift-based iOS app are [here](https://github.com/IBM/air-traffic-control/blob/master/ARFlightTracker-iOS-Swift/README.md).
 
