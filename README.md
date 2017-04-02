@@ -16,7 +16,7 @@ IoT Platform service will also be able to serve the flight information to all th
 ## Architecture
 Following figure shows the high-level architecture of a Cloud-based Air Traffic Control that relies on cheap Ground Stations to track flights
 
-![alt tag](https://github.com/IBM/air-traffic-control/blob/master/assets/architecture_diagram_v1.png)
+![alt tag](https://github.com/IBM/air-traffic-control/blob/master/assets/architecture_diagram_v2.png)
 
 ## Raspberry Pi powered ADS-B Ground Station
 
