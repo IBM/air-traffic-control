@@ -23,10 +23,9 @@ The user can tap the  AR View  tab in the app to switch to the AR-based View. In
  - ARKit - (part of the code base)
  
 # Steps:
- 1. git clone git@github.ibm.com:rogue-one/IBMFlightTracker.git
- 2. cd IBMFlightTracker && open IBMFlightTracker.xcworkspace using xcode
- 3. Run `pod install` from the project directory. This will install the dependencies define in `Podfile`
- 4. Change MQTT credentials in class  util/MQTTConnection.swift using Xcode editor . You have to create a IoT app in IBM           bluemix to get the MQTT server credentials. The credentials looks like in the follwing format
+ 1. cd ARFlightTracker-iOS-Swift && open ARFlightTracker-iOS-Swift.xcworkspace using xcode
+ 2. Run `pod install` from the project directory. This will install the dependencies define in `Podfile`
+ 3. Change MQTT credentials in class  util/MQTTConnection.swift using Xcode editor . You have to create a IoT app in IBM           bluemix to get the MQTT server credentials. The credentials looks like in the follwing format
  ```
      API_KEY = "<api-key>"
      API_TOKEN = "<token>"
@@ -35,12 +34,12 @@ The user can tap the  AR View  tab in the app to switch to the AR-based View. In
      IOT_PORT = 1883 (DEFAULT)
      IOT_TOPIC = "iot-2/type/<DEVICE_TYPE>/id/<DEVICE_ID>/evt/flight/fmt/json"
  ```
- 5. Change weather api credentials in class util/RestCall to have access to IBM weather API. You have to go the IBM weather in    bluemix and create an app to get the credentials.
+ 4. Change weather api credentials in class util/RestCall to have access to IBM weather API. You have to go the IBM weather in    bluemix and create an app to get the credentials.
  ```
     private static let WEATHER_API_USERNAME : String = "<username>"
     private static let WEATHER_API_PASSWORD : String = "<password>"
  ```
- 6. Build and Run
+ 5. Build and Run
  
 # Test Mode:
 You can run the app in test mode to be independant of IBM Bluemix MQTT server. In ViewController you can set the flag 
