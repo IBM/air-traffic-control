@@ -1,4 +1,4 @@
-# Correlating Flight and Weather data in Augmented Reality
+# Correlating Flight and Weather Data in Augmented Reality
 [![Build Status](https://travis-ci.org/IBM/air-traffic-control.svg?branch=master)](https://travis-ci.org/IBM/air-traffic-control)
 
 This repository contains instructions to build modern Cloud-based Air Traffic Control using IBM Bluemix.
@@ -16,8 +16,8 @@ IoT Platform service will also be able to serve the flight information to all th
 ## Architecture
 Following figure shows the high-level architecture of a Cloud-based Air Traffic Control that relies on cheap Ground Stations to track flights
 
-![alt tag](https://github.com/IBM/air-traffic-control/blob/master/assets/arch-iot-airtrafficcontrol-1024x878.png)
-![alt tag](https://github.com/IBM/air-traffic-control/blob/master/assets/AR-steps.png)
+![alt tag](https://github.com/ljbennett62/air-traffic-control/blob/master/assets/arch-iot-airtrafficcontrol-1024x878.png)
+![alt tag](https://github.com/ljbennett62/air-traffic-control/blob/master/assets/AR-steps.png)
 
 ## Raspberry Pi powered ADS-B Ground Station
 
