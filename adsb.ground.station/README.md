@@ -97,19 +97,19 @@ Instructions to install and configure Docker on Raspberry Pi 3 are
 ```
 $ git clone https://github.com/IBM/air-traffic-control
 $ cd air-traffic-control/adsb.ground.station
-$ docker build .
+$ docker build -t dump1090:1.0 .
 ```
 
-Once the Docker image is ready, you can retrieve the `image-id`, using the following command:
+Once the Docker image is ready, you can retrieve the `image-id` for `dump1090`, using the following command:
 
 ```
-$ docker images
+$ docker images dump1090
 ```
 
 ### Start Docker Container and Dump1090 Server
 
 Once the Docker image for `Dump1090 Server` has been created, you can start a Docker container. The
-Docker container will launch `Dump1090 Server` internally. Here is the step to start the container:
+Docker container will launch `Dump1090 Server` internally. Here is the step to start the container using `image-id` from the previous command:
 
 ```
 $ docker run -d --privileged -v /dev/bus/usb:/dev/bus/usb -p 30002:30002 <image_id>
