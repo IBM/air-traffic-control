@@ -95,8 +95,8 @@ Instructions to install and configure Docker on Raspberry Pi 3 are
 ### Create Docker Image for Dump1090 Server
 
 ```
-$ git clone <this_repo>
-$ cd <this_repo>
+$ git clone https://github.com/IBM/air-traffic-control
+$ cd air-traffic-control/adsb.ground.station
 $ docker build .
 ```
 
@@ -253,9 +253,9 @@ building this project on a regular laptop/desktop.
 ## Steps for building this project
 ```
 $ cd ~
-$ git clone --recursive <url_to_this_repo>
-$ cd <repo-name>
-  Update src/main/resources/application.properties file using the information obtained from the
+$ git clone --recursive https://github.com/IBM/air-traffic-control
+$ cd air-traffic-control
+  Update adsb.ground.station/src/main/resources/application.properties file using the information obtained from the
   earlier step. Failure to do this will result in java.io.IOException during startup.
 $ mvn clean install
 ```
@@ -271,6 +271,7 @@ and the device whose details are specified in `src/main/resources/application.pr
 Once the executable jar is built, running it on Raspberry Pi 3 is very simple:
 
 ```
+$ cd air-traffic-control/adsb.ground.station/target
 $ java -cp . -jar adsb.ground.station-develop-SNAPSHOT.jar
 ```
 
@@ -283,6 +284,7 @@ Make sure that the `Dump1090 Server` is up and running before running the aforem
 laptop with additional command-line parameters as shown below:
 
 ```
+$ cd air-traffic-control/adsb.ground.station/target
 $ java -cp . -jar adsb.ground.station-develop-SNAPSHOT.jar --host 192.168.1.10 --port 30002
 ```
 
@@ -298,6 +300,7 @@ captured over a period of an hour from San Jose area, and plays them continually
 without `Dump1090 Server`, you can do the following:
 
 ```
+$ cd air-traffic-control/adsb.ground.station/target
 $ java -cp . -jar adsb.ground.station-develop-SNAPSHOT.jar --simulate-sdr
 ```
 
