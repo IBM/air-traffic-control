@@ -16,7 +16,7 @@ struct FlightInfo  {
     let callSign: String        
     let headingInDegrees: Double
     let latitude : Double
-    let longitude: Double
+    let groundStationId : String
     let sensorMacAddress : String
     let velocityInMetersPerSecond : Double
     let type: String
@@ -35,7 +35,7 @@ extension FlightInfo{
             let headingInDegrees = json["headingInDegrees"].double,
             let latitude = json["latitude"].double,
             let longitude = json["longitude"].double,
-            let sensorMacAddress = json["sensorMacAddress"].string,
+            let groundStationId = json["groundStationId"].string,
             let velocityInMetersPerSecond = json["velocityInMetersPerSecond"].double,
             let type = json["type"].string,
             let createdInMillis = json["createdInMillis"].int64,
@@ -51,7 +51,7 @@ extension FlightInfo{
         self.headingInDegrees=headingInDegrees;
         self.latitude=latitude;
         self.longitude=longitude;
-        self.sensorMacAddress=sensorMacAddress;
+        self.groundStationId=groundStationId;
         self.velocityInMetersPerSecond=velocityInMetersPerSecond;
         self.type=type;
         self.createdInMillis=createdInMillis;
