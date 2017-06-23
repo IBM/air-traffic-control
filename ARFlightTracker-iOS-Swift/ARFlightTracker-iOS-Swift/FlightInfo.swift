@@ -17,7 +17,6 @@ struct FlightInfo  {
     let headingInDegrees: Double
     let latitude : Double
     let groundStationId : String
-    let sensorMacAddress : String
     let velocityInMetersPerSecond : Double
     let type: String
     let createdInMillis: Int64
