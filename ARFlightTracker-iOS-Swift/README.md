@@ -34,7 +34,7 @@ The user can tap the  AR View  tab in the app to switch to the AR-based View. In
      IOT_PORT = 1883 (DEFAULT)
      IOT_TOPIC = "iot-2/type/<DEVICE_TYPE>/id/<DEVICE_ID>/evt/flight/fmt/json"
  ```
- 4. Change weather api credentials in class util/RestCall to have access to IBM weather API. You have to go the IBM weather in    bluemix and create an app to get the credentials.
+ 4. Change weather api credentials in class util/RestCall to have access to IBM weather API. You have to go the IBM weather in    bluemix and create a service which will create credentials to be used in your app.
  ```
     private static let WEATHER_API_USERNAME : String = "<username>"
     private static let WEATHER_API_PASSWORD : String = "<password>"
@@ -43,5 +43,5 @@ The user can tap the  AR View  tab in the app to switch to the AR-based View. In
  
 # Test Mode:
 You can run the app in test mode to be independant of IBM Bluemix MQTT server. In ViewController you can set the flag 
- `testMode = true`
+ `flightTestMode = true`
  
