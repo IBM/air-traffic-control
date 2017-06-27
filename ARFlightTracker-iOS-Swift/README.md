@@ -15,6 +15,7 @@ The user can tap the  AR View  tab in the app to switch to the AR-based View. In
  - Swift 3
  - Xcode 8.0+
  - CocoaPod - https://cocoapods.org/
+ - iOS 10+
 
  
 # Dependencies
@@ -23,9 +24,9 @@ The user can tap the  AR View  tab in the app to switch to the AR-based View. In
  - ARKit - (part of the code base)
  
 # Steps:
- 1. cd ARFlightTracker-iOS-Swift && open ARFlightTracker-iOS-Swift.xcworkspace using xcode
+ 1. cd ARFlightTracker-iOS-Swift && open ARFlightTracker-iOS-Swift.xcworkspace using Xcode.
  2. Run `pod install` from the project directory. This will install the dependencies define in `Podfile`
- 3. Change MQTT credentials in class  util/MQTTConnection.swift using Xcode editor . You have to create a IoT app in IBM           bluemix to get the MQTT server credentials. The credentials looks like in the follwing format
+ 3. Update `util/MQTTConnection.swift` using Xcode editor. You have to create Internet of Things service in IBM Bluemix console to get the credentials. The credentials looks like as shown below:
  ```
      API_KEY = "<api-key>"
      API_TOKEN = "<token>"
@@ -34,7 +35,7 @@ The user can tap the  AR View  tab in the app to switch to the AR-based View. In
      IOT_PORT = 1883 (DEFAULT)
      IOT_TOPIC = "iot-2/type/<DEVICE_TYPE>/id/<DEVICE_ID>/evt/flight/fmt/json"
  ```
- 4. Change weather api credentials in class util/RestCall to have access to IBM weather API. You have to go the IBM weather in    bluemix and create a service which will create credentials to be used in your app.
+ 4. Update `util/RestCall.swift` to with credentials for IBM Weather API. Create Weather API service using IBM Bluemix console:
  ```
     private static let WEATHER_API_USERNAME : String = "<username>"
     private static let WEATHER_API_PASSWORD : String = "<password>"
