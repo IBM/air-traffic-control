@@ -21,7 +21,7 @@ The user can tap the  AR View  tab in the app to switch to the AR-based View. In
 # Dependencies
  - CocoaMQTT -  Note: moving to aphid client by IBM
  - SwiftyJSON
- - ARKit - (part of the code base)
+ - ARToolKit for swift - (part of the code base)
  
 # Steps:
  1. cd ARFlightTracker-iOS-Swift && open ARFlightTracker-iOS-Swift.xcworkspace using Xcode.
