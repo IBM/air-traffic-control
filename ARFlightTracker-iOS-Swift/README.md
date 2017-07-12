@@ -1,5 +1,5 @@
-# IBMFlightTracker
-IBMFlightTracker is an iOS based app which tracks flight pushed by SDR/ADSB message receiver through MQTT server. The app will display all the flights travelling point to point within the range of the receiver. IBM Flight tracker app is connected to IBM MQTT server to a topic which receives new/updated flight information based on which is rendered into the map view. The data is fed to the topic by SDR/ADSB message receiver. The map also shows animated view of flights heading in a particular direction towards its destination. The callout view on the flight contains flight details with weather in current location of the flight.
+# ARFlightTracker
+ARFlightTracker is an iOS based app which tracks flight pushed by SDR/ADSB message receiver through MQTT server. The app will display all the flights travelling point to point within the range of the receiver. AR Flight tracker app is connected to IBM MQTT server to a topic which receives new/updated flight information based on which is rendered into the map view. The data is fed to the topic by SDR/ADSB message receiver. The map also shows animated view of flights heading in a particular direction towards its destination. The callout view on the flight contains flight details with weather in current location of the flight.
 
 ## Map View
 Map View displays all the flights on a default map provided in the iOS device. The flight orientation is adjusted based on the current heading information in the payload. As the app receives MQTT messages, the flight will be seen moving in the direction towards its destination. A flight can be tapped to see more details such as such as flight number, altitude, distance etc. Figure below shows the rendering of the Map View with flights in the Swift-based app on an iOS device:
@@ -21,7 +21,7 @@ The user can tap the  AR View  tab in the app to switch to the AR-based View. In
 # Dependencies
  - CocoaMQTT -  Note: moving to aphid client by IBM
  - SwiftyJSON
- - ARToolKit for swift - (part of the code base)
+ - ios-arkit for iphone - (part of the code base)
  
 # Steps:
  1. cd ARFlightTracker-iOS-Swift && open ARFlightTracker-iOS-Swift.xcworkspace using Xcode.
