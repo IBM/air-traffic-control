@@ -14,7 +14,7 @@ The Cloud­-based Air Traffic Control can be implemented using IBM’s Bluemix C
 IoT Platform service will also be able to serve the flight information to all the iOS devices that are connected to it. A Swift­-based mobile app running on an iOS device can use Augmented Reality to render flights that are headed in that direction on the screen before they show up outside one’s window!
 
 ## Architecture
-Following figure shows the high-level architecture of a Cloud-based Air Traffic Control that relies on cheap Ground Stations to track flights
+Following figure shows the high-level architecture of a Cloud-based Air Traffic Control that relies on inexpensive Ground Stations to track flights
 
 ![alt tag](https://github.com/IBM/air-traffic-control/blob/master/assets/architecture_diagram_v2.png)
 
