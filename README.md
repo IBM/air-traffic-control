@@ -38,4 +38,4 @@ The instructions for tracking flights using Swift-based iOS app are [here](https
 
 # License
 
-[Apache 2.0](LICENSE.md)
+[Apache 2.0](LICENSE)
