@@ -1,3 +1,4 @@
+*阅读本文的其他语言版本：[English](README.md)。*
 # 空中交通管制
 [![构建状态](https://travis-ci.org/IBM/air-traffic-control.svg?branch=master)](https://travis-ci.org/IBM/air-traffic-control)
 
