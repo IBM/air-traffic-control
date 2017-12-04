@@ -1,3 +1,4 @@
+*Read this in other languages: [中国](README-cn.md).*
 # air-traffic-control
 [![Build Status](https://travis-ci.org/IBM/air-traffic-control.svg?branch=master)](https://travis-ci.org/IBM/air-traffic-control)
 
