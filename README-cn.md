@@ -21,10 +21,10 @@ IoT Platform 服务还能向所有与之相连的 iOS 设备提供航班信息�
 ## Application Workflow
 ![Application Workflow](./images/arch-iot-airtrafficcontrol-1024x878.png)
 
-1. Raspberry Pi streams airtraffic data to IoT Platform
-2. MQTT streams data to IoT Analytics dashboard for analysis
-3. Current weather is pulled from the Weather Service API
-4. Analytics and weather data are sent to phone device
+1. Raspberry Pi 将流量数据传输到物联网平台。
+2. MQTT 将数据传递到物联网分析仪表板中进行分析。
+3. 从天气服务 API 中获得的当前天气情况。
+4. 向手机设备发送分析结果和天气数据。
 
 ## Raspberry Pi 支持的 ADS-B 地面接收站
 
