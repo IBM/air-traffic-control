@@ -1,3 +1,5 @@
+*Read this in other languages: [日本](README-ja.md).*
+
 # adsb.ground.station
 
 Raspberry Pi powered Ground Station for commercial flights that does the following:
@@ -260,7 +262,7 @@ $ cd air-traffic-control
 $ mvn clean install
 ```
 
-The `adsb.ground.station/target` folder will contain the executable jar 
+The `adsb.ground.station/target` folder will contain the executable jar
 `adsb.ground.station-develop-SNAPSHOT.jar` specifically targeted for the IoT Platform service
 and the device whose details are specified in `src/main/resources/application.properties` file.
 
@@ -303,4 +305,3 @@ without `Dump1090 Server`, you can do the following:
 $ cd air-traffic-control/adsb.ground.station/target
 $ java -cp . -jar adsb.ground.station-develop-SNAPSHOT.jar --simulate-sdr
 ```
-
