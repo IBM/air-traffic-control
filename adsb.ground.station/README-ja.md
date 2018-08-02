@@ -6,7 +6,7 @@
 
  * _受信 (receives)_ : 1090MHz の周波数にチューニングされた Software-Defined Radio (SDR)デバイスを使用して、商用フライトによって放送される [Automatic Dependent Surveillance-Broadcast(ADS-B)](http://airfactsjournal.com/2013/01/ads-b-101-what-it-is-and-why-you-should-care/) メッセージを受信します。
  * _復号 (decodes)_ : 商用フライトからの ADS-B メッセージを復号します。
- * _発行 (publishes)_ : IBM の Bluemix Cloud の [Bluemix Internet of Things(IoT) Platform](https://console.ng.bluemix.net/catalog/services/internet-of-things-platform/?taxonomyNavigation=applications) に合致する [MQTT](http://mqtt.org/) メッセージを発行します。
+ * _発行 (publishes)_ : IBM Cloud (Bluemix) の [Internet of Things(IoT) Platform](https://console.ng.bluemix.net/catalog/services/internet-of-things-platform/?taxonomyNavigation=applications) に合致する [MQTT](http://mqtt.org/) メッセージを発行します。
 
 IBM Bluemix Cloud からの MQTT メッセージは、座標に基づいてデバイスに送信され、デバイスの近くのフライトを追跡することができます。
 拡張現実 (AR: Augmented Reality) を使用した iOS のフライト追跡アプリの詳細は、こちらの [README](../ARFlightTracker-iOS-Swift/README-ja.md) を参照してください。
@@ -190,7 +190,7 @@ $ ./dump1090 --raw --net
 
 ## IBM IoT プラットフォームへのデバイス登録と API キーの生成
 
-このプロジェクトは IBM Cloud で実行されている IoT プラットフォームに MQTT メッセージを送信するので、IoTプラットフォームのダッシュボードから、 [レシピ](https://developer.ibm.com/recipes/tutorials/how-to-register-devices-in-ibm-iot-foundation/) のに従って、次のことを実施します:
+このプロジェクトは IBM Cloud で実行されている IoT プラットフォームに MQTT メッセージを送信するので、IoTプラットフォームのダッシュボードから、 [レシピ](https://developer.ibm.com/recipes/tutorials/how-to-register-devices-in-ibm-iot-foundation/) に従って、次のことを実施します:
 
 * デバイスタイプとデバイス ID を登録する
 * アプリケーションの API キーと対応する認証トークンを生成する

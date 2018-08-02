@@ -44,7 +44,7 @@ iOS デバイス上で実行される Swift ベースのモバイルアプリは
 
 ## Raspberry Pi による ADS-B 地上局
 
-Raspberry Pi による ADS-B 地上局を建設するための指示は [こちら](adsb.ground.station/README-ja.md)
+Raspberry Pi による ADS-B 地上局を建設するための指示は [こちら](adsb.ground.station/README-ja.md) にあります。
 
 ## Swift ベースの iOS アプリ
 
